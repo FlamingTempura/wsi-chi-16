@@ -1,0 +1,330 @@
+% TODO
+% - add to discussion: hci techniques to mitigate problems
+% - check outcome names
+% - proof
+% - acknowledgements
+% - spellcheck
+% - oxford comma
+% - copyright
+% - metadata
+% - authors
+% - all references work (no ?)
+
+% DONE
+% - tidy table
+% - abstract
+% - illustrations?
+% - cull references
+% - fix reference case
+
+\documentclass{chi-ext}
+% Please be sure that you have the dependencies (i.e., additional LaTeX packages) to compile this example.
+% See http://personales.upv.es/luileito/chiext/
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% \copyrightinfo{Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+
+\copyrightinfo{Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+%{\emph{CHI 2015}}, April 18--23, 2015, Seoul, Republic of Korea. \\
+Copyright is held by the owner/author(s). Publication rights licensed to ACM. }%\\
+%ACM 978-1-4503-3145-6/15/04\ ...\$15.00.\\
+%DOI string from ACM form confirmation}
+%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+\copyrightinfo{%Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the Owner/Author.
+Copyright is held by the owner/author(s).}
+
+\title{The Dangers of the Quantified Self in Clinical Decisions}
+
+\numberofauthors{4}
+% Notice how author names are alternately typesetted to appear ordered in 2-column format;
+% i.e., the first 4 autors on the first column and the other 4 auhors on the second column.
+% Actually, it's up to you to strictly adhere to this author notation.
+\author{
+  \alignauthor{
+    \textbf{Peter West}\\
+    \affaddr{Health Science}\\
+    \affaddr{University of Southampton}\\
+    \affaddr{Southampton, UK}\\
+    \email{pw9g09@soton.ac.uk}
+  }\alignauthor{
+    \textbf{Mark Weal}\\
+    \affaddr{Web and Internet Science}\\
+    \affaddr{University of Southampton}\\
+    \affaddr{Southampton, UK}\\
+    \email{mjw@ecs.soton.ac.uk}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{Richard Giordano}\\
+    \affaddr{Health Science}\\
+    \affaddr{University of Southampton}\\
+    \affaddr{Southampton, UK}\\
+    \email{r.giordano@soton.ac.uk}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{Max Van Kleek}\\
+    \affaddr{Web and Internet Science}\\
+    \affaddr{University of Southampton}\\
+    \affaddr{Southampton, UK}\\
+    \email{emax@ecs.soton.ac.uk}
+  }
+}
+
+% Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
+\def\plaintitle{The Dangers of the Quantified Self in Clinical Decisions}
+\def\plainauthor{Peter West}
+\def\plainkeywords{Quantified Self; Clinical Research; Decision Making}
+\def\plaingeneralterms{Personal Informatics, Clinical Research}
+
+\hypersetup{
+  % Your metadata go here
+  pdftitle={\plaintitle},
+  pdfauthor={\plainauthor},  
+  pdfkeywords={\plainkeywords},
+  pdfsubject={\plaingeneralterms},
+  % Quick access to color overriding:
+  %citecolor=black,
+  %linkcolor=black,
+  %menucolor=black,
+  %urlcolor=black,
+}
+
+\usepackage{graphicx}   % for EPS use the graphics package instead
+\usepackage{balance}    % useful for balancing the last columns
+\usepackage{bibspacing} % save vertical space in references
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The increasing ubiquity of personal tracking devices is leading to calls to use Quantified Self data to support clinical decisions.  Such data has been demonstrated as promoting positive health behaviours, such as maintaining a healthy diet. However, clinicians' method of practice is grounded within data-impoverished environments, characterised by tight time and resource constraints. Within such environments, humans are subject to cognitive bias and poor judgement when making decisions, which may lead to undesirable outcomes when interpreting data. Through reviewing literature on decision making within constraints, this workshop paper identifies four undesirable outcomes pertaining to the use of Quantified Self data in clinical decisions: favouring illusory patterns, positive tendency, misuse of prior knowledge and technological limitations. Future research will focus on studying how and when these outcomes present within clinical settings.
+
+%Consumer devices, mobile apps and social networking websites exist to record personal information related to health, including weight, diet and activity.  As such, there has been interest in its use by clinicians to support decision making. , and is is uncertain how introducing data may change practice. It has been demonstrated that humans are
+
+%clinicians' ability to interpret data may be prone to cognitive bias and poor judgement. 
+
+%In agreement with previous research, the biases identified pose a greater risk within scenarios where there is limited time and resources. Drawing from these results, this dissertation forms framework for future research into data use in clinical scenarios.
+\end{abstract}
+
+\keywords{\plainkeywords}
+\category{H.5.2}{Information interfaces and presentation (e.g., HCI)}{User-centered design}.
+\category{J.3}{Life and medical sciences}{Health} 
+
+\section{Introduction}
+
+  % Personal Informatics
+  The explosion of social networking websites, mobile apps and consumer devices for tracking personal information has created new detailed data sources about individuals. The pervasiveness of these technologies allows the capturing of extremely detailed data about health and wellbeing. Coined the ``Quantified Self'', this information has been demonstrated to promote positive health behaviours, such as reducing stress and improving communication during the recovery of cancer patients \cite{Jacobs2014}.
+
+  %  such as encouraging a healthy diet \cite{Brown2006}  and reminding people to take their medication \cite{Stawarz2014}
+
+  % Application the clinical environments
+  The health benefits of the Quantified Self have led calls to integrate consumer technology within healthcare. In the UK, the recent Personalised Health and Care 2020 framework proposes that health and wellbeing data, including data from wearable devices and mobile health apps, will form part of patient health records by 2018 \cite{Personalised2014}. The framework proposes that clinicians will be able to use this data to make better decisions, in turn improving healthcare, reducing costs and empowering patients to make their own decisions. It has been proposed that the Quantified Self can contribute to preventative medicine, helping clinicians track the lifestyle choices, environmental factors and general wellbeing of patients in order to avoid health problems \cite{Swan2009}. Initial implementation of this is evident in the USA, with the Food and Drug Administration's approval of several consumer tracking devices for clinical trials, citing the importance of quantifiable analysis of physical activity to physiological monitoring \cite{U.S.FoodandDrugAdministration2014}.
+
+  % Problem
+  However, while Quantified Self has been demonstrated to promote positive health behaviour, there has been little research on how the presence of such data may affect decisions within clinical environments. The introduction of such data to clinical environments without a deep understanding of potential dangers may lead to adverse effects, such as misdiagnoses or harmful outcomes (such as death). The Personalised Health and Care 2020 framework briefly raises this risk: ``the failure to use information properly in health and care means people can experience unnecessary levels of preventable ill health'' \cite{Personalised2014}. However, the framework gives no detail on how information should be used and how problems may be mitigated. It is not yet clear what undesirable outcomes may be present when introducing Quantified Self data to clinical decisions.
+
+  %It is therefore important to consider what dangers may be associated with introducing data from consumer devices to clinical decisions.
+
+
+\section{Decision Making with Data}
+
+  % Decision making
+  It is now widely accepted that there are two forms of decision making: System 1 and System 2 \cite{Kahneman2012}. System 1 decisions are made quickly and automatically. In contrast, System 2 decisions are made slowly and deliberately. The automatic nature of System 1 decisions is from a lack of conscious reasoning; instead, a number of heuristics and cognitive biases are relied on to make a decision more quickly. While heuristics and biases may deliver an optimal solution most of the time, the results may sometimes be undesirable. Hence, System 1 decisions often result in error \cite{Kahneman2012}.
+
+  Within clinical environments, particularly Emergency Rooms, time is tightly constrained and decisions must be made quickly \cite{Croskerry2014}. These decisions are typically characterised as System 1 decisions. It has been established that a wide variety of cognitive biases are prevalent in clinical decision making, which may lead to poor judgement and errors \cite{Croskerry2014}. While there is ongoing research around biases within clinical decisions, there is little research in how the provision of data affects bias \cite{Croskerry2002}. 
+
+  % Data interpretation
+  Due to its pervasive nature, Quantified Self data varies significantly in structure, context and content, making it difficult to study how it is interpreted. It has been established that data which is difficult to interpret or poorly structured leads to poor judgement and decision making \cite{Neale2001}. It has also been established that large amounts of data may lead to data overload, a situation which may lead to undesirable techniques for interpreting data \cite{Mcintosh2002}. This is exacerbated by time constraints, as has been observed within Intensive Care Units, where false positives were frequently identified \cite{Mcintosh2002}.   
+
+  %Data from consumer devices may take many forms, but is typically large and requires considerable time to interpret \cite{Something}. The large size of data leads to data overload, leading to the misuse of data to form particular assertions \cite{Woods2002}. Data overload has been demonstrated as prevalent within intensive care units . Problems relating the data interpretation within constrains should therefore be considered. Data overload combined with time constraints may lead to particularly dangerous biases. \cite{Woods2002}
+
+  % are prone to error due to a lack of conscious reasoning. . System 1 decisions make use of heuristics, which are rules of thumb employed to speed up decision making, but which may not always lead to a positive outcome. The lack of reasoning in System 1 decisions also makes them prone to cognitive bias \cite{Kahneman2012}. and are thus particularly prone to cognitive bias.
+
+
+\section{Characterizing Undesirable Outcomes}
+
+  Based on research and experiments around heuristics and cognitive bias, four undesirable outcomes have been identified: \textit{favouring illusory patterns}, \textit{positive tendency}, \textit{misuse of prior knowledge} and \textit{technological limitations}. Each outcome is expanded on below, with the characteristics and consequences discussed. 
+
+  %We should ask what the dangers are, how we can identify them, and what the consequences may be. What follows is a discussion of how interpretation errors combined with cognitive biases may lead to significant dangers. Four areas of such dangers are discussed: 
+
+\subsection{Favouring Illusory Patterns}
+  % illusory patterns
+  When there are time constraints, constraints on how data may be controlled, or it is not clear how data should be used, there is an increased likeliness of illusory patterns being identified \cite{Whitson2008}. Illusory patterns are seemingly meaningful relationships in random data which, despite their statistical insignificant, may be used to influence a decision \cite{Kahneman2012}.
+  % representativeness
+  Quantified Self data is specific to individual patients. It has been found that clinicians neglect other sources of data, for example base rates of a particular disease, when presented with information specific to a patient \cite{Bar-Hillel1980}. Illusory patterns found on such data may therefore be considered more important than other sources of information. This is an example of the representativeness heuristic, where the statistical significance of an observation has little influence on its importance in reasoning \cite{Kahneman2012}. 
+
+  %conclusion
+  Illusory patterns may thus lead to neglecting other sources of information, such as base rate, patient presentation or a patient's health record. In turn, this may lead to misdiagnoses, rationalising unusual diseases, overutilisation of resources, and contribute to inaccurate estimates of base rates \cite{Croskerry2002}.  
+
+  % and thus be considered more significant than, for example, base rates for a particular disease. There is a danger that illusory patterns may be favoured over other sources of information.  This is supported by research ... argues that people order information in degree of relevance, such that when relevant information about a subject is provided, the base rate is weighted lower and subsequently ignored \cite{Bar-Hillel1980}. demonstrated that clinicians ignore the base rate of a rare disease if patients present data which strongly suggests the presence of the disease. \cite{Casscells1978}
+
+  %It may thus be used by clinicians in rationalising an atypical diagnosis for a patient with a particular condition based on such bias \cite{Croskerry2002}.  If statistical significance of observations is not used in valuation,  overestimates of unlikely diagnoses may occur \cite{Croskerry2002}. interpretive biases and uncertainty may lead to erroneous observations about data \cite{KahnemanDaniel2000}. Base rates may subsequently be ignored in favour of poorly judged information. 
+
+
+  %Time-constrained and information-limited decisions have been shown to lead a greater chance of false patterns being recognised \cite{Bassili2000}. Loss of control over data has been shown to lead to greater illusory pattern perception \cite{Whitson2008}. Likeliness dependant on design of data and analysis techniques. When data is considered as a reliable source of information, insights from data will be considered significant. Problems arise when false patterns are recognised and considered more significant than other sources of information, such as base rates or patient presentation. 
+
+
+  
+  %Judging patterns and drawing insights based on resemblance is known as the representativeness heuristic Patterns show similarity to other conditions, and are thus considered of greater significance to other information, such as prevalence of that condition \cite{Kahneman2012}. For example, a patient may present symptoms with symptoms of a rare illness. A clinician may neglect base rate in favor of symptoms. Not necessarily a bad thing.    Representativeness heuristic, extension neglect and base rate neglect where the statistical significance of an observation has little influence on its value in reasoning \cite{KahnemanDaniel2000}. When clinicians use patient data, their observations ultimately affect decision making. Extension and base rate neglect affect how this data is interpreted in terms of placing value to observations. illusory patterns + representativeness = bad (seeing false patterns and ignoring base rates)
+  %Insufficient understanding of relevant research, or lack of familiarity with an individual patient, leads to reliance on stereotypes \cite{Chapman1969}.  The degree of use of base case is dependent on knowledge of it, which may not be available in thin-slice scenarios due to limited time and informational resources \cite{KahnemanDaniel2000}.  However, in thin-slice scenarios,  More time leads to greater potential to understand the quantifiable data \cite{KahnemanDaniel2000}. Less time constraints leads to greater potential to understand the quantifiable data \cite{KahnemanDaniel2000}. Greater knowledge about particular information leads to more rational valuation of observations and thus better understanding of significance of observations \cite{Case1999,Edwards2001a}.  However, as found by \cite{Bar-Hillel1980}, base rates are weighted lower than relevant information about a subject. 
+
+
+
+
+\subsection{Positive Tendency}
+  % affect
+  Decisions are often influenced by current emotion and desire for a good outcome. This is known as the affect heuristic \cite{Kahneman2012}.  It has been found that people heavily rely on affect in time-pressured and high risk situations \cite{Finucane1998}. Thus, a clinician's emotional state can significantly affect their interpretation of patient data and their decisions. 
+
+  % confirmation
+  The affect heuristic leads to data being interpreted in ways to support one's own desires \cite{Nickerson1998}. Subsequent findings will be prone to confirmation bias, where findings are emphasised based on if they support one's own desires or beliefs \cite{Kahneman2012}. Within situations in which variables are unknown, it has been found that people are less willing to eliminate an original hypothesis, with a person attributing unjustified rationality to that hypothesis \cite{Wason1960}.
+  
+  % conclusion
+  Subsequently, data may be interpreted in ways impacted by emotion. Personal hopes and regrets influence decision making, which reduces objectivity. Clinicians may make diagnoses based on what they hope to find, leading to the preservation of weak hypotheses and diagnoses, despite evidence to the contrary. In turn, this may lead to errors and adverse events including incorrect and missed diagnoses \cite{Croskerry2002}.
+
+  % The desire for a good outcome is likely to lead to only interrogating data in ways which support positive outcome. One's current emotion influences a decision - affect heuristic . Affect heuristic in which decisions are influenced by current emotions, such as happiness or sadness \cite{Zajonc1980}. \cite{Tversky1974} state that decisions under uncertainty lead to a greater dependence on heuristics and intuition. \cite{Croskerry2010} found that when intuition is relied upon, clinical reasoning is particularly susceptible to the affect heuristic. In one study, being sad leads to a greater affect in thin-slice scenarios \cite{Ambady2002}. 
+
+  %Affective reactions are often the first reactions of humans and made more quickly and confidently than cognitive judgements \cite{Zajonc1980}.
+
+  %Decisions influences by one's hypothesis \cite{Kahneman2012}. Impacts how one interprets data - data selectively interpreted to support favored diagnosis . One's own beliefs influence judgements and decisions \cite{Mahoney1977}. The tendency to emphasise information which supports one's own beliefs, and refute information which does not, has been widely discussed \cite{Mahoney1977}. There is thus risk that clinicians may tend to interpret patient data in ways that only support their own views or hypotheses. \cite{Croskerry2002} argues that clinicians make diagnoses base on what they hope to find.  The estimates of frequencies of diagnoses affect how judgements are made on patient data and subsequent decisions due to the availability heuristic \cite{Tversky1973}. Time constraints limit the processing of new information, leading to a less informed conclusion thus less information to refute an original hypothesis or a clinician's personal beliefs \cite{Nisbett1980}. 
+
+
+
+\subsection{Misuse of prior knowledge}
+
+  % priming
+  It has been observed that decisions are likely to be influenced by prior experiences \cite{Reay2013}. This effect is known as priming, and is of particular importance to clinical settings as clinicians see many patients. Exposure to one piece of information influences how another piece of information is perceived \cite{Kahneman2012}. 
+
+  There are two crucial cases where this is a concern: priming between patients, and priming between patient data sets \cite{Croskerry2002}. The former pertains to a clinicians decision on one patient priming a decision for another patient. The latter pertains to a clinicians interpretation of one piece of information priming how another piece of information is interpreted. Past experiences of using data will inform what is being looked for in data. This is an instance of the framing effect, where the way in which a problem is presented affects the outcome of a task \cite{Kahneman2012}.
+
+
+  %Meyer1971
+
+  % framing
+  %When primed, clinicians may interpret data in a particular way.  It pertains to both how pieces of information are interpreted and how subsequent clinical decisions are made. It has been observed that clinicians switch between risk aversion and risk taking depending on how a problem is presented \cite{Kahneman2012}. 
+
+  % conclusion
+  Earlier decisions or interpretations may therefore affect the performance of later decisions or interpretations. A clinician may base their diagnoses on the perceived likelihood of a particular disease, which may be influenced by what the clinician has observed previously, which may result in an incorrect diagnoses \cite{Croskerry2002}.
+
+  %Furthermore, it has been found that the performance of an individual changes as they are exposed to repeated similar tasks \cite{Wundt1980}.  Thus, clinicians are at risk of basing risk on how a problem is presented over other evidence which is available, leading to poor judgement in interpretation and decision making. Time limitations have been shown to lead to a greater effect from framing \cite{Takemura1992}. \cite{Takemura1992} demonstrated that when options were phrased positively according to their gains, the least-risk option was chosen. Conversely, when the options were phrase negatively according  to their losses, the highest-risk option was chosen. linked time pressure and high stakes of a thin-slice context to lead to greater occurrence of priming \cite{Reay2013}.
+  % priming
+  %Priming between patients (and their data) - has been observed in triage nurses .
+
+
+  
+\subsection{Technological limitations}
+
+\marginpar{\vspace{-25.78em}
+  \begin{table}
+  \caption{Design rules to mitigate undesirable outcomes.}
+  \setlength{\topsep}{0pt}
+    \begin{framed}
+    \raggedright
+    \setstretch{0.8}
+    \setlength{\parskip}{0.00cm}
+    \textbf{Favouring illusory patterns}
+    \begin{enumerate}[leftmargin=1em,noitemsep,topsep=0.4em,parsep=0em]
+    \item allow comparison of data sources, e.g. overlaying national trend data over an individual's data
+    \item provide greater control over data
+    \item provide tools to validate patterns
+    \end{enumerate}
+
+    \textbf{Positive tendency}
+    \begin{enumerate}[leftmargin=1em,noitemsep,topsep=0.4em,parsep=0em]
+    %\item obtain objective data to reduce affect
+    \item aid in challenging hypotheses by providing greater control over data
+    \item designing for rapid usage to allow more time for considering of hypotheses
+    \end{enumerate}
+
+    \textbf{Misuse of prior knowledge}
+    \begin{enumerate}[leftmargin=1em,noitemsep,topsep=0.4em,parsep=0em]
+    \item allow comparison to base rates to avoid comparison to prior patients
+    \end{enumerate}
+
+    \textbf{Technological limitation}
+    \begin{enumerate}[leftmargin=1em,noitemsep,topsep=0.4em,parsep=0em]
+    \item intuitive UI design to allow flexible use of tools (e.g. visual programming languages)
+    \item designing for rapid usage to allow more time for considering other uses of tool
+    \end{enumerate}
+    \end{framed}
+
+    
+    \label{tab:ui}
+  \end{table}
+  }
+  % functional fixedness
+  Limitations of tools or analysis techniques may lead to a relying on known examples, which may limit insights which may be gained from data \cite{Adamson1952}. Clinicians may be limited to using a data source for a purpose that they've successfully used it for before, despite other uses being possible. Problem solving has been demonstrably less effective when a solution requires atypical use of an object \cite{German2005}.
+
+  % availability
+  Information which is considered more important, such as recent information, is judged more frequent and therefore more heavily relied upon for decision making \cite{Kahneman2012}. When interpreting data, the availability heuristic causes some pieces of information to become disproportionately relied upon based on inaccurate estimates of frequencies. Having limited time and resources leads to focus on the little available information \cite{Croskerry2002}, thus leading to a more subjective decision.
+
+  % conclusion
+  This limits the capability of a clinician to gain insight from patient data, leading to less informed decisions. It can lead to missing a diagnosis due to inability to interrogate data in an unusual way \cite{Croskerry2002}.
+
+  %For example, it has been found that it is easier to recall frequent observations than infrequent ones \cite{Clore1991}. \cite{Kahneman2012} state that decisions under uncertainty lead to a greater dependence on heuristics.  \cite{Croskerry2002} finds that the availability heuristic can lead to disproportionate perceptions of frequencies, leading to tendencies to make diagnoses based on information which appears more important. This can thus lead to incorrect diagnoses.
+
+  %This has been shown to lead to a greater dependence on the availability heuristic in decision-making \cite{Wanke1995}.
+
+
+\section{Conclusion and Future Work}
+
+\captionsetup{belowskip=0.2pt,aboveskip=0pt}
+
+
+  This research has thus far aimed to identify undesirable outcomes of introducing Quantified Self data to clinical decisions. Four have been identified, which are summarised in Table~\ref{tab:dangers} along with their characteristics and clinical consequences. While this is not an exhaustive list, this preliminary work suggests that there are questions that should be raised before introducing Quantified Self to clinical decisions. Namely, what are the undesirable outcomes, how do they manifest themselves, and how can they be mitigated? 
+
+  The nature of Quantified Self data plays a large role in each of the outcomes. As such, there may be a number of design rules which could mitigate these outcomes, including in user interface design and data visualisation. Table~\ref{tab:ui} gives a few initial suggestions of such rules.
+
+
+\begin{table*}[t]
+    \caption{Possible undesirable outcomes, their characteristics and consequences}
+    \centering
+
+    \begin{tabular}{lL{6.65cm}L{6.65cm}}\\
+      \toprule
+      \textbf{Outcome} & \textbf{Characteristics} & \textbf{Consequences} \\
+      \midrule \addlinespace[0.4em]
+      Favouring illusory patterns 
+        & Illusory patterns will be considered more significant than other data sources due to the representativeness heuristic.
+        & Neglect of base rates and other sources of information. May lead to misdiagnoses, overutilisation of resources and contribute to inaccurate estimates of base rates. \\ \addlinespace[0.6em]
+      Positive tendency
+        & Current emotion leads to forming particular hypotheses for data interpretation (affect heuristic) which leads to confirmation bias.
+        & Interpretation of data informed by current emotions, reducing objectivity of diagnoses, potentially leading to incorrect diagnoses. \\ \addlinespace[0.6em]
+      Misuse of prior knowledge
+        & Prior experiences with data from other patients may lead to data of current patient being interpreted in a particular way (priming and framing effect).
+        & Prior experiences lead to neglect of base rates and limited interpretation of data sources of current patient, possibly leading to inaccurate diagnoses. \\ \addlinespace[0.6em]
+      Technological limitation
+        & The limitation of the tools or techniques (functional fixedness) leads to clinicians utilising only ways they have used or seen previously (availability).
+        & Clinician may miss important insights from the data and miss a diagnosis. \\ \addlinespace[0.4em]
+      \bottomrule
+    \end{tabular}
+    
+    \label{tab:dangers}
+  \end{table*}
+
+
+  This research proposes that the introduction of data may lead to certain dangers relating to the nature of decision making and biases. Future work will involve further investigation in order to identify the nature of these dangers. This research aims to raise awareness of undesirable outcomes of cognitive and interpretative error, informing both clinical training and how Quantified Self tools and devices are designed. 
+
+
+  %\vfill
+%\section{Acknowledgements}
+%We thank all DUX 2003 publications support and staff who wrote this document originally and allowed us to modify it for this conference.
+%This template was based on Manas Tungare's \texttt{chi.cls}, and rewritten by Luis A. Leiva.
+
+\balance
+\bibliographystyle{acm-sigchi}
+\bibliography{references}
+
+\end{document}
