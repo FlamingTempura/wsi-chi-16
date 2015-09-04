@@ -1,0 +1,131 @@
+\documentclass{sigchi}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is      granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy 
+
+%\pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead 
+%\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage[pdftex]{hyperref}
+% \usepackage{url}      % llt: nicely formatted URLs
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{ccicons}
+\usepackage{todonotes}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={SIGCHI Conference Proceedings Format},
+  pdfauthor={LaTeX},
+  pdfkeywords={SIGCHI, proceedings, archival format},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{The Quantified Patient in the Doctor's Office: Challenges in Designing for Clinical Decision-Making Settings}
+
+\numberofauthors{3}
+\author{%
+  \alignauthor{1st Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{2nd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{3rd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+}
+
+\maketitle
+
+\begin{abstract}
+While the \emph{Quantified Self} movement has largely centred around the individual’s own use of his or her data, the same kinds of patient-captured information about their well-being could, in theory, facilitate more accurate and effective medical diagnosis and treatment.  In practice, however, introducing such data during in a way that they can be used effectively and without additional risk during patient visits and hospital episodes creates significant challenges, that we believe, HCI research can help.  In this paper, we seek to understand the primary bottlenecks to the use of QS data during patient visits in both primary and secondar (specialist) care through a literature survey and group 
+
+\end{abstract}
+
+\keywords{Quantified Self; mHealth; Clinical Decision-Making}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI)}{Miscellaneous} \category{See
+  \url{http://acm.org/about/class/1998/} for the full list of ACM
+  classifiers. This section is required.}{}{}
+
+\section{Introduction}
+
+Empowering patients ``take charge'' of their health is an idea frequently championed by politicians, technologists, and healthcare experts alike~\cite{swan2012health}.  Yet, despite countless government and industry-led initatives across Europe, the UK, and North America, to inspire this ``patient-led healthcare revolution'', it has yet to happen.  
+
+One area, however, where individuals have been taking the lead in trying to understand their own health, is the \emph{Quantified Self} movement \cite{}, primarily comprised of hobbyists and non-health experts who use technological tools to meticulously record and interrogate the minutiae of their physical and mental states over time.   As the population of those interested in self-tracking grew and attracted mainstream interest, the industry has swiftly responded to the expanding demand for self-tracking tools and technologies with a now enormous collection of wearable and embeddable sensors.  These technologies now enable people to record and keep track of aspects of their health with less effort and better fidelity than ever previously, and will continue to improve such as by being less invasive, more comfortable, and more accurate.
+
+While the direct application of such sensors to understanding patients' particular symptoms, situations and lifestyles in the healthcare context would seem straightforward, most physicians today reject the use of self-logged QS data.  Even when this information is consulted, it of little no use for differential diagnosis.
+
+What are the potential barriers to the use of self-logged QS data in critical clinical decision making settings?  What are doctors, nurses, specialists and medical professionals' views on the QS movement and self-logged data?  Is it a problem of what is being captured, how it is being captured, how it is represented, or presented?  We sought to start to answer these questions using 
+
+%   UK Prime Minister Gordon Brown,  pronounced in 2008 that more effective ``future will be one of patient power, patients engaged and taking control over their own health and healthcare.” – Gordon Brown, U.K. Prime Minister
+
+
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{wsi-chi-16}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
