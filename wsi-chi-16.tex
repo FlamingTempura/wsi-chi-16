@@ -117,18 +117,22 @@ What are the barriers to the use of self-logged QS data in critical clinical dec
 
 \section{Background} 
 
-\subsection{Evidence Based Medicine: Clinical Decision Making with Data Under Uncertainty} 
+In this section we briefly descirbe 
 
-The term \emph{evidence-based medicine} which refers to the use of epidemiological methods in both patient-level decision making and formulating population-level clinical care guidelines.  In the first use of the term, David M. Eddy pointed out that while outcome analysis may make it seem that there is a clear path towards achiving more accurate, or at least consistent diagnoses, things are never that simple in practice~\cite{eddy1990challenge}:
+\subsection{Evidence Based Medicine: Clinical Decision-Making with Data under Uncertainty} 
 
-	\begin{quote}
-		Decisions might be variable but they are not whimsical or flippant. The variability occurs because physicians must make decisions about phenomenally complex problems, under very difficult circumstances, with very little support. They are in the impossible position of not knowing the outcomes of different actions, but having to act anyway.
-	\end{quote}
+The term \emph{evidence-based medicine} which refers to the use of epidemiological methods in both patient-level decision making and formulation of population-level clinical care guidelines.  In the first use of the term, David M. Eddy pointed out that, while outcome analysis may make it seem that there is a clear path towards achieving more accurate, or at least consistent, diagnoses, things are never that simple in practice~\cite{eddy1990challenge}:
 
+\begin{quote}
+	Decisions might be variable but they are not whimsical or flippant. The variability occurs because physicians must make decisions about phenomenally complex problems, under very difficult circumstances, with very little support. They are in the impossible position of not knowing the outcomes of different actions, but having to act anyway.
+\end{quote}
 
+Eddy, thus, argues that, that due to the nature of the complexities of assessing individual patients' conditions under the constraints in place, ranging from the informational to the situational, working under extreme uncertainty is inevitable. He cites work studying the effects of biases on decision  % decision making heuristics, however, imprecise remain the most practical method.  Studies of decision making heuristics and biases, which we discuss later, 
 
-\subsection{eHealth}
-The proliferation of consumer devices for health tracking have led calls to integrate consumer technology within healthcare. In the UK, for example, the Personalised Health and Care 2020 framework set out a vision in which health and wellbeing data, sensed from wearable and environmental sensors, and mobile health apps, will form part an integral part of patient health records by 2018~\cite{Personalised2014}.  The framework proposes that these data, by ``filling in the gaps'' between visits with their GP will enable them to more effectively perform differential diagnosis at point of admission, thereby simultaneously improving outcomes and driving down costs.  By applying data mining methods to such self-logged data, it will enable early onset detection of chronic conditions, thereby potentially reversing the course of some conditions before they set in~\cite{Swan2009}.  Such data may also lead to medical insights pertaining to the complex health, environmental and lifestyle factors that might contribute to patients' conditions, providing a mechanism for better understanding diseases and their linked causes.  Initial enthusiasm for this vision is also evident in the US, with the US Food and Drug Administration's approval of  consumer tracking devices for clinical trials, citing the importance of quantifiable analysis of physical activity to physiological monitoring~\cite{U.S.FoodandDrugAdministration2014}.
+Modern texts for nursing and clinical evaluation have formalised the diagnostic process of determining a patient's disease or condition based on available evidence, including presenting symptoms as a technique known as \emph{differential diagnosis}~\cite{thompson2002clinical}.  This is usually described as some variation of the following procedure: First, the physician gathers all information available about the patient, creating a list of the patient's symptoms.  Then, she or he lists all possible candidate conditions for the symptoms, which is then prioritised with most the urgently dangerous possible causes first.  Finally, possible causes are ruled out or treated systematically.  
+
+\subsection{eHealth, mHealth and Telemedicine}
+Personal sensing devices and mobile smartphone apps that provide patients with support have become dominant themes in visions for more effective and efficient healthcare of the future. In the UK, for example, the Personalised Health and Care 2020 framework set out a vision in which health and well-being data, sensed from wearable and environmental sensors, would seamlessly integrate with patient health records by 2018~\cite{Personalised2014}.  The framework proposes that these data would ``fill in the gaps'' between visits with their GP or specialist, enabling clinicians to more effectively perform differential diagnosis at point of admission.  This thereby simultaneously improving outcomes and driving down costs.  By applying data mining methods to such self-logged data, it will enable early onset detection of chronic conditions, thereby potentially reversing the course of some conditions before they set in~\cite{Swan2009}.  Such data may also lead to medical insights pertaining to the complex health, environmental and lifestyle factors that might contribute to patients' conditions, providing a mechanism for better understanding diseases and their linked causes.  Initial enthusiasm for this vision is also evident in the US, with the US Food and Drug Administration's approval of  consumer tracking devices for clinical trials, citing the importance of quantifiable analysis of physical activity to physiological monitoring~\cite{U.S.FoodandDrugAdministration2014}.
 
 Yet despite this industry, political and tech-driven enthusiasm for use of self-logged QS data, clinical uptake has been slow.  For example, even with Apple's partnership with US healthcare providers around the targeted of their HealthKit framework have focused primarily on its use in telemonitoring for randomised clinical trials (RCT) rather than differential diagnosis.  But even here, problems have been met with some partners pulling out, citing insufficient interest by both patients and physicians~\cite{}.  
 
@@ -141,40 +145,43 @@ Since multiple factors seemed to be potentially contributing to the slow uptake 
 % \cite{Swan2009} has called for use of this data as a means to supplement healthcare, which would increase ``information flow, transparency, customization, collaboration and patient choice and responsibility taking, as well as quantitative, predictive and preventive aspects.''. The use of self-tracking data in healthcare is not new. The health diary has been popular since the 1950's as a data collection method \cite{Richardson1994}.  \cite{Richardson1994} note that particular types of data that are recorded include pain, fatigue, medication use and dietary intake. This shares overlap with health and wellbeing data, suggesting there are existing use cases where health and wellbeing data could be supplemented. \cite{OLoughlin2013} has demonstrated the use of lifelogging for the purpose of increasing diet awareness. However, \cite{Swan2009} has discussed that there is currently little adoption, perhaps due to the barriers of technology in clinical environments.
 
 
-\section{Pre-study: Literature Survey} 
+\section{Pre-study: Literature Review} 
 
 We anticipated that the slow uptake of the use of self-logged QS could potentially be attributed to a large number of factors, and thus decided it prudent to first do a survey of medical, quantified-self and HCI literature.  Our objective  was to establish a theoretical framework from which we could then identify areas that could require further investigation, as well as opportunities where research in HCI could potentially help.  
 
-\subsection{Review Method}
+\subsection{Literature Review: Method}
 
-We started with a set of search terms broad enough to encompass studies of clinical practice where patient-logged data (both paper-based and digital, manual and automatic) were introduced into a clinical setting.  To do this we searched PubMed for keywords ``patient diaries'', ``self-report diaries'', ``quantified-self'', ``smartphone apps'', ``wearable sensors'', and ``telemonitoring''. 
+We started with a set of search terms broad enough to encompass studies of clinical practice where patient-logged data (both paper-based and digital, manual and automatic) were introduced into a clinical setting.  To do this we searched PubMed, Google Scholar and the ACM DL for keywords ``patient diaries'', ``care diaries'', ``wellbeing diaries'', ``self-report diaries'', ``quantified-self'', ``smartphone apps'', and ``wearable sensors''.
 
-Since we wanted to focus on the usage of data by medical experts, we excluded studies about use by patients themselves, such as for feedback, reflection, goal setting and self monitoring.   Focusing only on existing practice, we omitted papers describing new interfaces and systems that have not had substantial adoption, as well as papers focused on the capture side of health diarising and life-logging by patients, except where aspects of capture affected its later use.  Since, however factors pertaining to the use of patient-related data in general may be particularly salient or problematic for the QS logged case, we included factors that might influence all use of patient data, including human factors issues of data interfaces, electronic medical records, and situational constraints of clinical settings, including operating theatres and emergency rooms.
+Since we wanted to focus on the usage of data by medical experts, we excluded studies about use by patients themselves, such as for feedback, reflection, goal setting and self monitoring, including behaviour-change studies and studies of motivation to self-diaries, which were prevalent from the HCI community.   Focusing only on existing practice, we omitted papers describing new interfaces and systems that have not had substantial adoption.  We also excluded papers discussing the capture side of health diarising and life-logging by patients, except where aspects of capture affected its later use.  We were careful to include papers that discussed any issues relating to the use of patient data in clinical setting, including those that discussed human factors issues specifically, to more broadly  theatres and emergency rooms.
 
-After finding a small set of results, we then broadened our search to include studies that discussed the use of patient data in medical decision-making, including both patient-supplied and clinical data held by providers themselves.  We hoped to find a broad range of factors spanning human-factors issues to social, cultural, institutional, situational, among others.
+After finding a small set of results, we then broadened our search to include studies that discussed the use of patient data in medical decision-making, including both patient-supplied and clinical data held by providers themselves.  We included ``telemonitoring'', and ``electronic patient records''.  This  hoped to find a broad range of factors spanning human-factors issues to social, cultural, institutional, situational, among others.
 
+For each paper, we identified problem(s) in the clinical use of data, which were first added to a spreadsheet and linked to their original source.  After examining each of the papers, 2 researchers organised the list into themes, attempting to merge all problems with the same underlying cause, while keeping those that did not overlap distinct.  During this process, we identified a set of themes related specifically to cognitive biases, which we analysed and report separately below.
 
-\subsection{Results: High Level}
+\subsection{Literature Review: Results}
 
-\subsection{Results: Cognitive Dispositions to Respond}
+From an initial set of 2340 results, we identified 429 papers that actually contained at least one of the search terms among keywords and the abstract. From here, we identified $XX$ relevant papers according to the criteria defined above.  From this we derived the $CC$ themes visible in \ref{fig:themes}, omitting themes pertaining to cognitive dispositions to respond which we discuss next.
 
-During the first phase, we encountered a substantial body of work pertaining to  situational and psychological factors that influenced the decision-making performance of medical experts in clinical settings.  Croskerry's \emph{Cognitive Dispositions to Respond}~\cite{} we discovered a large body of work pertaining to 
+\subsubsection{High-level Themes}
 
-We started with MEDLINE, Web of Science, and the ACM DL
-Using the keywords "medical decision-making", "clinical decision-making", "patient-logged data", "quantified self", "data in hospital admission", "GP visit", searches were performed on BMJ, MEDLINE, CINAHL, Google Scholar, Web of Science, Springer, and the ACM DL.  This collectively resulted in 2982 results, many of which
-d
-Temporal constraints
-Situational constraints
-UI/UX constraints 
-Workflow constraints
-Cognitive Biases
-Training/background constraints
+%% party here
 
-Exclusion criteria:
-  Anything that only involved the patient, including behaviour change studies
+\subsubsection{Cognitive Dispositions to Respond}
 
-\subsection{Results}
+During the first phase, we encountered a substantial body of work pertaining to  situational and psychological factors that influenced the decision-making performance of medical experts in clinical settings.  Croskerry's \emph{Cognitive Dispositions to Respond}~\cite{} 
 
+% We started with MEDLINE, Web of Science, and the ACM DL
+% Using the keywords "medical decision-making", "clinical decision-making", "patient-logged data", "quantified self", "data in hospital admission", "GP visit", searches were performed on BMJ, MEDLINE, CINAHL, Google Scholar, Web of Science, Springer, and the ACM DL.  This collectively resulted in 2982 results, many of which
+% d
+% Temporal constraints
+% Situational constraints
+% UI/UX constraints 
+% Workflow constraints
+% Cognitive Biases
+% Training/background constraints
+% Exclusion criteria:
+%   Anything that only involved the patient, including behaviour change studies
 
 
 %   UK Prime Minister Gordon Brown,  pronounced in 2008 that more effective ``future will be one of patient power, patients engaged and taking control over their own health and healthcare.” – Gordon Brown, U.K. Prime Minister
