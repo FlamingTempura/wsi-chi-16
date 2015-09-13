@@ -117,20 +117,31 @@ What are the barriers to the use of self-logged QS data in critical clinical dec
 
 For our investigation, we focused on two different roles: primary care physicians on the ``frontline'' of the medical service, and secondary care specialists who work in hospitals in specialised units.  In our investigation, we sought to understand the fundamental nature of the barriers to adoption of broadly-classed 'self-logged' patient data, particularly of the most common types facilitated by the many kinds of consumer health monitoring tools becoming available.  That is, we wished to identify whether reasons that such self-logged data were still, so often, deemed useless by clinical professionals, included \emph{what} was captured, how it was captured, the ways in which it was represented or made available during a patient consultation, or  due to other, yet unidentified problems derived from looking at or processes required to derive insight from it.  From this, we wished to extrapolate how such problems might help be shaping and solved through HCI research, such as by re-thinking tools people used to monitor themselves, the kinds of data they captured, or the ways that physicians and medical professionals might access and use it, towards the visions of eHealth and mHealth set out so often in the popular press (e.g. ~\cite{goetz, thingy, thingy}).
 
-\section{Hypotheses}
+\section{Overview of Approach}
 
-From a clinical perspective, what are the problems
+We began with an initial set of broad dimensions (Figure \ref{fig:qs}) chosen to represent the potentially many kinds of reasons that self-logged, QS data remains far from fulfilling its potential in clinical practice.
 
+\begin{figure}[tbpb]
 \begin{enumerate}
-    \item \emph{Data subject}: \emph{What} is captured?
-    \item \emph{Sampling}: \emph{How} and \emph{when} information is captured?
-    \item \emph{Accuracy}: Trusting the \emph{veracity/quality} of the instruments or capture method?
-    \item \emph{Access}: Ease of \emph{access} to the data?
-    \item \emph{Interactional}: Interfere with patient visits?
-    \item \emph{Workflow}:Workflow not accommodate use
-    \item \emph{Biases}: Cognitive biases introduced by looking at data
+    \item \emph{Data subject}: Lack of relevance or utility of \emph{what} is captured
+    \item \emph{Sampling method}: Problems with \emph{how} and \emph{when} information is captured
+    \item \emph{Accuracy}: Lack of trust in accuracy of instruments or capture method
+    \item \emph{Access}: Problems with physician \emph{access} to the data
+    \item \emph{Patient communication}: Interference with patient clinician communication
+    \item \emph{Workflow}: Interference or exclusion from diagnostic workflow
+    \item \emph{Biases}: Danger of cognitive biases introduced by data?
     \item \emph{Other}: External factors? (\emph{data handling}, \emph{legal}, \emph{billing} etc)
 \end{enumerate}
+\caption{Initial dimensions for categorising barriers to clinical use of self-logged/QS data.}
+\label{fig:qs}
+\end{figure}
+
+Since these dimensions encompassed a broad set of possible factors, including data-oriented problems (such as pertaining to subject, quality and sampling), situational constraints, and practice constraints, we wished to understand which, if any, of these dimensions had support from previous studies.  This lead us a broad survey of medical literature, which we describe in the next section.  
+
+Then, to investigate whether we could gather primary evidence towards the importance of any of these dimensions, we followed with a role-play study in which practicing GPs and specialists were presented with patient illness scripts, based on real cases, in which patients brought various QS data with them while in the process of presenting their complaint.  We asked GPs and specialists to come up with their own diagnosis, following a think-aloud protocol.  We then transcribed, annotated and derived codes from each session to identify reasons the QS data were or were not consulted, and ways that the presence of the QS data influenced the diagnostic process.  From these codes, we derived a set of themes, which we then used to compare our findings to previous findings in the literature.  Finally, we discuss the limitations of our study and future work.
+
+% To undestand this method we conducted a two phase invesitgation. Fi
+
 
 % This paper presents a collective summary of our initial investigation in 
 
@@ -139,7 +150,7 @@ From a clinical perspective, what are the problems
 
 \section{Background} 
 
-We contextualise our investigation of self-logged data in clinical decision-making against two closely related fields within the medical literature: the first, \emph{evidence based medicine} sought to expand the use of empirical methods (such as used in epidemiology) for evaluating and improving the effectiveness of decisions such as those affecting treatment choices.  The second, \emph{clinical decision making} examines the cognitive, interactional and situational processes which influence how practitioners arrive at decisions, under the practical constraints necessary for conducting their practices.  In this section, we first introduce at a high level, common visions of how technology-enabled, patient data-driven healthcare might be realised in the future.  We then discuss evidence-based medicine and the role of clinical decision making literature to our investigation.
+We contextualise our investigation against two closely related fields: the first, \emph{evidence based medicine} sought to expand the use of empirical methods (such as used in epidemiology) for evaluating and improving the effectiveness of decisions such as those affecting treatment choices.  The second, \emph{clinical decision making} examines the cognitive, interactional and situational processes which influence how practitioners arrive at decisions, under the practical constraints necessary for conducting their practices.  In this section, we first introduce at a high level, common visions of how technology-enabled, patient data-driven healthcare might be realised in the future.  We then discuss evidence-based medicine and the role of clinical decision making literature to our investigation.
 
 \subsection{Visions for Data-driven eHealth / mHealth}
 Notions of ``big data'' and ``data driven healthcare'' have inspired many visions  for more data-informed healthcare internationally. In the popular press, Thomas Goetz's \emph{The Decision Tree} outlined a vision in which every person will be DNA-tested at birth, and tracked with sensors throughout their lives; the resulting piles of data would be used to classify and compute (through statistical measures) optimal treatments and actions. Policy makers have set out national agendas towards such a goal; the UK's Personalised Health and Care 2020 framework set out a vision in which health and well-being data, sensed from wearable and environmental sensors, would seamlessly integrate with patient health records by 2018~\cite{Personalised2014}.  The framework proposes that these data would ``fill in the gaps'' between visits with their GP or specialist, enabling clinicians to more effectively perform personalised differential diagnosis at point of care.  It is anticipated that the introduction of such technologies will simultaneously improve outcomes substantially and drive down costs.  Other visions include use in preventative medicine, to enable early onset detection of chronic conditions, thereby potentially reversing the course of conditions before they set in~\cite{Swan2009}.  Exploratory data mining of sensed data is also likely to radically improve our understanding of both prominent and rare medical conditions, by revealing relationships among genetic, lifestyle, and environmental factors that might contribute to patients' symptoms.  Initial enthusiasm for this vision is also evident in the US, with the US Food and Drug Administration's approval of  consumer tracking devices for clinical trials, citing the importance of quantifiable analysis of physical activity to physiological monitoring~\cite{U.S.FoodandDrugAdministration2014}.
@@ -175,14 +186,13 @@ Modern texts for nursing and clinical evaluation have formalised the diagnostic 
 Recent research has revealed that clinical decision-making is often strongly influenced by cognitive bias, leading to preventable adverse events, worsened patient outcomes, and higher mortality.  Croskerry et al. characterised a ~\citep{Croskerry2013}. \citet{Graber2002} states that cognitive bias is a major cause of preventable diagnostic error, but is extremely challenging to study and reduce. This complements earlier discoveries by \citet{Kahneman1982}, in which people tend to use biases when making decisions under uncertainty, occasionally leading to severe errors. Many forms of cognitive bias have been identified -- Wikipedia lists over 350\footnote{Wikipedia -- List of cognitive biases -- \url{http://en.wikipedia.org/wiki/List_of_cognitive_biases} [Accessed 4th Sep 2014]} -- however, the consequences of biases in clinical decision making remain largely unexplored \citep{Croskerry2013}. It is thus unknown how the provision of patient data may affect bias in clinical decisions.
 
 % research questions
-By conducting a literature review of research in cognitive bias over the last 50 years, this dissertation presents a list of 11 cognitive biases which may affect clinical decisions made when patient data is used. From this, it has been identified that supplementing patient data may introduce further bias due to methods clinicians use to interpret patient data. Furthermore, it has been found that these biases usually have a more significant effect when decisions are made in acute scenarios, such as emergency rooms, where decisions must be made quickly with limited resources.
+% By conducting a literature review of research in cognitive bias over the last 50 years, this dissertation presents a list of 11 cognitive biases which may affect clinical decisions made when patient data is used. From this, it has been identified that supplementing patient data may introduce further bias due to methods clinicians use to interpret patient data. Furthermore, it has been found that these biases usually have a more significant effect when decisions are made in acute scenarios, such as emergency rooms, where decisions must be made quickly with limited resources.
 
 % definitions
-For the purpose of this dissertation, decisions which involve patient data are called \textit{evidence-based clinical decisions}. The term \textit{patient data} refers specifically to personal information which is collected by mobile apps and consumer devices, such as the number of steps taken, video lifelogs, location history and status updates on social networks. Patient data is subsequently \textit{interpreted} by clinicians, which refers to the observation, analysis and sense-making of data.
+%For the purpose of this paper, decisions which involve patient data are called \textit{evidence-based clinical decisions}. The term \textit{patient data} refers specifically to personal information which is collected by mobile apps and consumer devices, such as the number of steps taken, video lifelogs, location history and status updates on social networks. Patient data is subsequently \textit{interpreted} by clinicians, which refers to the observation, analysis and sense-making of data.
 
 
 % stuff from pete's masters thesis
-Since multiple factors seemed to be potentially contributing to the slow uptake of patient-logged data in clinical practice, including temporal, situational, social, and potentially even legal constraints, we started our investigation with a broad survey of medical literature focusing on the use of data during visits with patients and hospital admissions.  
 
 % a little bit about all the potential ways QS could help
 
@@ -236,6 +246,59 @@ From an initial set of 2340 results, we identified 429 papers that actually cont
 % confirmation bias - using particular data sources to support a particular hypothesis
 % framing
 % functional fixedness
+
+\subsubsection{Implications from bias}
+
+
+\begin{table*}
+    \centering
+    \begin{tabular}{p{1.5cm} p{7cm} p{6.3cm} p{1.5cm}}
+    \toprule
+    {\small\textbf{Factor}}
+    & {\small \textbf{Explanation}}
+      & {\small \textbf{Implications}}
+    & {\small \textbf{Literature sources}} \\
+    \midrule
+    Illusory patterns
+    &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
+            \item seemingly meaningful relationships in random data which, despite their statistical insignificant, may be used to influence a decision
+            \item neglect of other sources of data, for example base rates of a particular disease, when presented with information specific to a patient
+            \item statistical significance of an observation has little influence on its importance in reasoning
+        \end{itemize}
+    & Leads to neglecting other sources of information, such as base rate, patient presentation or a patient's health record. In turn, this may lead to misdiagnoses, rationalising unusual diseases, overutilisation of resources, and contribute to inaccurate estimates of base rates.
+    & \cite{Whitson2008}, \cite{Kahneman2012}, \cite{Bar-Hillel1980}, \cite{Croskerry2002} \\
+    Affect
+    &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
+            \item a clinician's emotional state can significantly affect their interpretation of patient data and their decisions
+            \item data may be interpreted in ways to support one's own desires
+            \item findings are prone to confirmation bias, where findings are emphasised based on if they support one's own desires or beliefs
+            \item people are less willing to eliminate an original hypothesis, with a person attributing unjustified rationality to that hypothesis
+        \end{itemize}
+    & Data may be interpreted in ways impacted by emotion. Personal hopes and regrets influence decision making, which reduces objectivity. Clinicians may make diagnoses based on what they hope to find, leading to the preservation of weak hypotheses and diagnoses, despite evidence to the contrary. In turn, this may lead to errors and adverse events including incorrect and missed diagnoses
+    & \cite{Kahneman2012}, \cite{Finucane1998}, \cite{Nickerson1998}, \cite{Wason1960}, \cite{Croskerry2002} \\
+    Misuse of prior knowledge
+    &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
+            \item decisions are likely to be influenced by prior experiences
+            \item Exposure to one piece of information influences how another piece of information is perceived
+            \item  the way in which a problem is presented affects the outcome of a task (framing)
+            \item clinicians switch between risk aversion and risk taking depending on how a problem is presented
+        \end{itemize}
+    & Particular importance to clinical settings as clinicians see many patients. Earlier decisions or interpretations may therefore affect the performance of later decisions or interpretations. A clinician may base their diagnoses on the perceived likelihood of a particular disease, which may be influenced by what the clinician has observed previously, which may result in an incorrect diagnoses
+    & \cite{Reay2013}, \cite{Kahneman2012}, \cite{Croskerry2002} \\
+    Techological limitations
+    &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
+            \item Limitations of tools or analysis techniques may lead to a relying on known examples, which may limit insights which may be gained from data (functional fixedness)
+            \item Problem solving has been demonstrably less effective when a solution requires atypical use of an object
+            \item  Information which is considered more important, such as recent information, is judged more frequent and therefore more heavily relied upon for decision making
+            \item the availability heuristic causes some pieces of information to become disproportionately relied upon based on inaccurate estimates of frequencie
+        \end{itemize}
+    & Limited to using a data source for a purpose that they've successfully used it for before, despite other uses being possible. This limits the capability of a clinician to gain insight from patient data, leading to less informed decisions. It can lead to missing a diagnosis due to inability to interrogate data in an unusual way
+    & \cite{Kahneman2012}, \cite{Adamson1952}, \cite{German2005}\\
+    \bottomrule
+    \end{tabular}
+    \caption{Implications from bias when there are time constraints, constraints on how data may be controlled, or it is not clear how data should be used}~\label{tab:biases}
+\end{table*}
+
 
 \section{Methodology}
 
