@@ -32,6 +32,8 @@
 \usepackage{ccicons}
 \usepackage{todonotes}
 % \usepackage{natbib}
+\usepackage{array}
+\usepackage{tikz}
 
 % llt: Define a global style for URLs, rather that the default one
 \makeatletter
@@ -155,6 +157,8 @@ We contextualise our investigation against two closely related fields: the first
 \subsection{Visions for Data-driven eHealth / mHealth}
 Notions of ``big data'' and ``data driven healthcare'' have inspired many visions  for more data-informed healthcare internationally. In the popular press, Thomas Goetz's \emph{The Decision Tree} outlined a vision in which every person will be DNA-tested at birth, and tracked with sensors throughout their lives; the resulting piles of data would be used to classify and compute (through statistical measures) optimal treatments and actions. Policy makers have set out national agendas towards such a goal; the UK's Personalised Health and Care 2020 framework set out a vision in which health and well-being data, sensed from wearable and environmental sensors, would seamlessly integrate with patient health records by 2018~\cite{Personalised2014}.  The framework proposes that these data would ``fill in the gaps'' between visits with their GP or specialist, enabling clinicians to more effectively perform personalised differential diagnosis at point of care.  It is anticipated that the introduction of such technologies will simultaneously improve outcomes substantially and drive down costs.  Other visions include use in preventative medicine, to enable early onset detection of chronic conditions, thereby potentially reversing the course of conditions before they set in~\cite{Swan2009}.  Exploratory data mining of sensed data is also likely to radically improve our understanding of both prominent and rare medical conditions, by revealing relationships among genetic, lifestyle, and environmental factors that might contribute to patients' symptoms.  Initial enthusiasm for this vision is also evident in the US, with the US Food and Drug Administration's approval of  consumer tracking devices for clinical trials, citing the importance of quantifiable analysis of physical activity to physiological monitoring~\cite{U.S.FoodandDrugAdministration2014}.
 
+% quantified self vs self tracking vs lifelog vs prescribed sensors vs personal health records
+
 % dont have much basis of saying this
 
 Responding to this interest, the race to attract end-user consumers to better and more accurate physiological sensors has taken off past 8 years. New, freshly funded companies such as Withings, FitBit and Jawbone, have been joined veteran sport performance monitoring device makers such as Garmin, while established brands for sport to consumer electronics, such Nike and Sony have joined the fray to each develop attractive wearable personal tracking devices.  While still a minority, several, namely at the time of writing iHealth and Withings, have had several of their consumer-level sensors certified for clinical use, as under the US FDA Class-1 and 2 medical device classification scheme. 
@@ -213,11 +217,161 @@ After finding a small set of results, we then broadened our search to include st
 
 For each paper, we identified problem(s) in the clinical use of data, which were first added to a spreadsheet and linked to their original source.  After examining each of the papers, 2 researchers organised the list into themes, attempting to merge all problems with the same underlying cause, while keeping those that did not overlap distinct.  During this process, we identified a set of themes related specifically to cognitive biases, which we analysed and report separately below.
 
+Excluded papers relating to self-recorded data which patients were asked to record by their physicians, such as papers containing the words "telemonitoring" or "telemedicine". Literature reviews were excluded. 
+
+%Papers discussing the accuracy or reliability of self-management did not disc
+
 \subsection{Literature Review: Results}
 
 From an initial set of 2340 results, we identified 429 papers that actually contained at least one of the search terms among keywords and the abstract. From here, we identified $XX$ relevant papers according to the criteria defined above.  From this we derived the $CC$ themes visible in \ref{fig:themes}, omitting themes pertaining to cognitive dispositions to respond which we discuss next.
 
+% @@@@@@@@@@@@@@@@@@@@@@@@@
+%
+% initially focused on "use of self-recorded data by clinicians", but there is little literature on this. we then broke down the literature review into individual factors:
+% * reliability of self-recorded data
+% * use of IT by clinicians (e.g. EMR)
+% * cognitive factors when clinicians interpret information
+%
+% @@@@@@@@@@@@@@@@@@@@@@@@@
+
+\def \w {$\bullet$}
+
 \subsubsection{High-level Themes}
+
+\begin{tikzpicture}
+\draw[step=0.5cm,color=gray] (-1,-1) grid (1,1);
+\node at (-0.75,+0.75) {\cite{chung_more_2015}};
+\node at (-0.25,+0.75) {\cite{ancker_invisible_2015}};
+\node at (+0.25,+0.75) {C};
+\node at (+0.75,+0.75) {D};
+\node at (-0.75,+0.25) {E};
+\node at (-0.25,+0.25) {F};
+\node at (+0.25,+0.25) {G};
+\node at (+0.75,+0.25) {H};
+% ...
+\node at (+0.75,-0.75) {Q};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[step=0.5cm,color=gray] (-4,-1) grid (22,18);
+\node at (-4,-1) {\textbf{Factor}}
+\node at (0,-1) {\cite{chung_more_2015}}
+\node at (1,-1) {\cite{ancker_invisible_2015}}
+\node at (2,-1) {\cite{becker_mhealth_2014}}
+\node at (3,-1) {\cite{sullivan_guess_2014}}
+\node at (4,-1) {\cite{almalki_use_2015}}
+\node at (5,-1) {\cite{patel_probing_2012}}
+\node at (6,-1) {\cite{Swan2009}}
+\node at (7,-1) {\cite{millar_shared_2004}}
+\node at (8,-1) {\cite{ancker_you_2015}}
+
+% use of IT by clinicians
+\node at (9,-1) {\cite{alsos_mobile_2012}}
+\node at (10,-1) {\cite{frankel_effects_2005}}
+\node at (11,-1) {\cite{zeldes_information_2011}}
+\node at (12,-1) {\cite{chen_unpacking_2011}}
+\node at (13,-1) {\cite{patterson_human_2004}}
+\node at (14,-1) {\cite{schoenberg_weaving_2000}}
+\node at (15,-1) {\cite{vikkelso_subtle_2005}}
+\node at (16,-1) {\cite{hughes_2.0_2008}}
+
+% reliability/accuracy of self-recorded data
+\node at (17,-1) {\cite{demonceau_contribution_2015}}
+\node at (18,-1) {\cite{tsoukalas_data_2015}}
+\node at (19,-1) {\cite{frier_hypoglycaemia_2015}}
+\node at (20,-1) {\cite{khariwala_self-reported_2015}}
+\node at (21,-1) {\cite{dontje_measuring_2015} }}
+
+\node[fill=black] at (0,0) {}
+
+\end{tikzpicture}
+
+
+\begin{table*}
+    \setlength\extrarowheight{0.1cm}
+    \setlength\tabcolsep{0pt}
+    \centering
+    \begin{tabular}{>{\raggedright}p{4.3cm} |
+        | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} 
+        | >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} 
+        | >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm}}
+        
+    \toprule
+    & \multicolumn{9}{>{\centering}p{5.4cm}|}{Clinical use of self-recorded data}
+    & \multicolumn{8}{>{\centering}p{4.8cm}|}{Clinical use of IT}
+    & \multicolumn{5}{>{\centering}p{3.0cm}|}{Reliability of self-recording} \\
+    
+    \textbf{Factor}
+    % use of self-recorded data by clinicians
+    & \cite{chung_more_2015}
+    & \cite{ancker_invisible_2015}
+    & \cite{becker_mhealth_2014}
+    & \cite{sullivan_guess_2014}
+    & \cite{almalki_use_2015}
+    & \cite{patel_probing_2012}
+    & \cite{Swan2009}
+    & \cite{millar_shared_2004}
+    & \cite{ancker_you_2015}
+    
+    % use of IT by clinicians
+    & \cite{alsos_mobile_2012}
+    & \cite{frankel_effects_2005}
+    & \cite{zeldes_information_2011}
+    & \cite{chen_unpacking_2011}
+    & \cite{patterson_human_2004}
+    & \cite{schoenberg_weaving_2000}
+    & \cite{vikkelso_subtle_2005}
+    & \cite{hughes_2.0_2008}
+    
+    % reliability/accuracy of self-recorded data
+    & \cite{demonceau_contribution_2015}
+    & \cite{tsoukalas_data_2015}
+    & \cite{frier_hypoglycaemia_2015}
+    & \cite{khariwala_self-reported_2015}
+    & \cite{dontje_measuring_2015} } \\
+    
+        \midrule 
+    \textbf{Data capture}} \\
+    capture irrelevant/useless things
+        &\w &\w &   &   &   &\w &   &   &   &   &   &\w &   &\w &   &   &   &   &   &   &   &  \\
+    poor data quality
+        &   &   &   &\w &   &\w &   &   &\w &   &   &   &   &\w &   &   &\w &\w &\w &   &   &\w }\\
+    data incomplete
+        &   &\w &\w &   &   &\w &   &   &\w &   &   &   &   &\w &   &\w &   &   &   &\w &\w &  \\[0.4cm]
+        %\midrule
+    \textbf{Data access}} \\
+    no standard for data representation
+        &\w &\w &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &   &   &  \\
+    selective disclosure
+        &\w &\w &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &  \\
+    poor interoperability
+        &\w &\w &\w &   &   &   &   &\w &   &\w &   &   &\w &   &\w &   &   &   &\w &   &   &  \\[0.4cm]
+        %\midrule
+    \textbf{Clinical practice}} \\
+    no standard methods for interpretation
+        &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w \\
+    no data analysis training
+        &\w &   &\w &   &\w &   &\w &   &   &   &   &   &   &\w &   &\w &\w &   &   &   &   &  \\
+    takes time away from patient
+        &\w &   &   &   &   &   &   &   &\w &\w &\w &   &\w &\w &   &   &   &   &   &   &   &  \\
+    threatens professional autonomy
+        &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &  \\
+    legal issues
+        &   &   &\w &\w &   &   &\w &   &   &   &   &   &   &   &   &\w &   &   &   &   &   &  \\[0.4cm]
+        %\midrule
+    \textbf{Situational constraints}} \\
+    time pressure
+        &\w &   &   &   &   &   &   &   &   &   &\w &\w &   &\w &   &\w &   &   &   &   &   &  \\
+    information overload
+        &   &   &\w &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &  \\
+    not worth clinician effort
+        &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+    
+    \bottomrule
+    \end{tabular}
+    \caption{Major themes}~\label{tab:biases}
+\end{table*}
+
 
 %% party here
 
@@ -252,48 +406,49 @@ From an initial set of 2340 results, we identified 429 papers that actually cont
 
 \begin{table*}
     \centering
-    \begin{tabular}{p{1.5cm} p{7cm} p{6.3cm} p{1.5cm}}
+    \begin{tabular}{>{\raggedright}p{1.9cm} p{7.5cm} p{5.8cm} p{1.4cm}}
     \toprule
     {\small\textbf{Factor}}
     & {\small \textbf{Explanation}}
-      & {\small \textbf{Implications}}
+    & {\small \textbf{Implications for use of patient-provided data}}
     & {\small \textbf{Literature sources}} \\
     \midrule
-    Illusory patterns
+    
+    Contextualisation % Problems relating to how a clinians puts a problem in context - their previous experience, framing, approach to risk
     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-            \item seemingly meaningful relationships in random data which, despite their statistical insignificant, may be used to influence a decision
-            \item neglect of other sources of data, for example base rates of a particular disease, when presented with information specific to a patient
-            \item statistical significance of an observation has little influence on its importance in reasoning
+            \item \textit{Priming} - exposure to one piece of information influences how another piece of information is perceived.
+            \item \textit{Availability} - the disposition to judge things as being more likely or frequently occurring if they readily come to mind, such as recent information. % e.g. recent experience  with hearing about a disease may inflate the likelihood of its being diagnosed
+            \item \textit{Framing} - the way in which a problem is presented affects the outcome of a task.
+            \item \textit{Risk taking} - clinicians switch between risk aversion and risk taking depending on whether the problem is expressed in terms of the possibility the patient might die or live.
         \end{itemize}
-    & Leads to neglecting other sources of information, such as base rate, patient presentation or a patient's health record. In turn, this may lead to misdiagnoses, rationalising unusual diseases, overutilisation of resources, and contribute to inaccurate estimates of base rates.
-    & \cite{Whitson2008}, \cite{Kahneman2012}, \cite{Bar-Hillel1980}, \cite{Croskerry2002} \\
-    Affect
+    & Clinicians see many patients, and their prior decisions or interpretations made with patient-logged data may change how they use new data. Therefore, some pieces of information may become disproportionately relied upon based on inaccurate estimates of frequencies. Further, the patient's approach to providing their data (e.g., why they recorded it) may contribute to a clinicians framing of the problem. This has strong implications for how data may be presented by a patient, and the order data are presented in.
+    %The order in which self-logged data are presented, and during a presentation of complaints to a physician. Earlier decisions or interpretations may therefore affect the performance of later decisions or interpretations. which may result in an incorrect diagnoses. 
+    %  A clinician may base their diagnoses on the perceived likelihood of a particular disease, which may be influenced by what the clinician has observed previously,
+    
+    & \cite{Reay2013}, \cite{Kahneman2012}, \cite{Croskerry2002},  \\
+    
+    Information interpretation %Bias may affect how information is interpreted
     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-            \item a clinician's emotional state can significantly affect their interpretation of patient data and their decisions
-            \item data may be interpreted in ways to support one's own desires
-            \item findings are prone to confirmation bias, where findings are emphasised based on if they support one's own desires or beliefs
-            \item people are less willing to eliminate an original hypothesis, with a person attributing unjustified rationality to that hypothesis
+            \item \textit{Illusory patterns} - seemingly meaningful relationships are seen in random data which, despite their statistical insignificant, may be used to influence a decision.
+            \item \textit{Representativeness} - when presented with information specific to a patient, other sources of data are neglected (e.g., base rates of a particular disease).
+            \item \textit{Anchoring and adjustment} - the tendency to perceptually lock onto prominent features in a patient’s presentation too early in the diagnostic process, and failing to adjust this initial impression in the light of later information. Anchoring has been found to lead to premature decision making with patients being labelled with a diagnosis early in presentation.
+            \item \textit{Base rate neglect} - statistical significance of an observation has little influence on its importance in reasoning.
         \end{itemize}
-    & Data may be interpreted in ways impacted by emotion. Personal hopes and regrets influence decision making, which reduces objectivity. Clinicians may make diagnoses based on what they hope to find, leading to the preservation of weak hypotheses and diagnoses, despite evidence to the contrary. In turn, this may lead to errors and adverse events including incorrect and missed diagnoses
-    & \cite{Kahneman2012}, \cite{Finucane1998}, \cite{Nickerson1998}, \cite{Wason1960}, \cite{Croskerry2002} \\
-    Misuse of prior knowledge
+    & Errors made during information processing may may lead to misdiagnoses, rationalising unusual diseases, overutilisation of resources, and contribute to inaccurate estimates of base rates. An observer's ability to appraise the importance of particular pieces information over others may lead a physician to ignore critical pieces of data that were not among those first noticed, such as base rate, the patient's presentation or the patient's medical record.
+    & \cite{Whitson2008}, \cite{Kahneman2012}, \cite{Kahneman1978}, \cite{Bar-Hillel1980}, \cite{Croskerry2002}, \cite{Gruber} \\
+    
+    Metacognition % The cognitive state of the clinician
     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-            \item decisions are likely to be influenced by prior experiences
-            \item Exposure to one piece of information influences how another piece of information is perceived
-            \item  the way in which a problem is presented affects the outcome of a task (framing)
-            \item clinicians switch between risk aversion and risk taking depending on how a problem is presented
+            \item \textit{Affect heuristic} - a clinician's emotional state can significantly affect their interpretation of patient data and their decisions
+            \item \textit{Confirmation bias} - findings are emphasised based on if they support one's own desires or beliefs
+            \item \textit{Selective exposure} - people are less willing to eliminate an original hypothesis, with a person attributing unjustified rationality to that hypothesis based on their pre-existing views.
+            \item \textit{Ambiguity effect and outcome bias} - if the probability of favourable outcome is only available for some options, other options tend not be considered, also causing the belief that favourable outcomes are more likely.
+            \item \textit{Functional fixedness} - limitations of tools or analysis techniques may lead to a relying on known examples, which may limit insights which may be gained from data
+            \item \textit{Appropriation difficulty} - problem solving has been demonstrably less effective when a solution requires atypical use of an object
         \end{itemize}
-    & Particular importance to clinical settings as clinicians see many patients. Earlier decisions or interpretations may therefore affect the performance of later decisions or interpretations. A clinician may base their diagnoses on the perceived likelihood of a particular disease, which may be influenced by what the clinician has observed previously, which may result in an incorrect diagnoses
-    & \cite{Reay2013}, \cite{Kahneman2012}, \cite{Croskerry2002} \\
-    Techological limitations
-    &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-            \item Limitations of tools or analysis techniques may lead to a relying on known examples, which may limit insights which may be gained from data (functional fixedness)
-            \item Problem solving has been demonstrably less effective when a solution requires atypical use of an object
-            \item  Information which is considered more important, such as recent information, is judged more frequent and therefore more heavily relied upon for decision making
-            \item the availability heuristic causes some pieces of information to become disproportionately relied upon based on inaccurate estimates of frequencie
-        \end{itemize}
-    & Limited to using a data source for a purpose that they've successfully used it for before, despite other uses being possible. This limits the capability of a clinician to gain insight from patient data, leading to less informed decisions. It can lead to missing a diagnosis due to inability to interrogate data in an unusual way
-    & \cite{Kahneman2012}, \cite{Adamson1952}, \cite{German2005}\\
+    & Data interpretations and decisions made using data are ways impacted by emotion and irrational belief in an original hypothesis, despite evidence to the contrary. This may lead to errors and adverse events including incorrect and missed diagnoses. Further, the inability of a clinician to use appropriate data effectively increases the time cost of using data, and limits the capability of a clinician to gain insight from data. In specialist clinical roles, this may lead to only using data in ways that they have been trained in their specialism.
+    & \cite{Kahneman2012}, \cite{Finucane1998}, \cite{Nickerson1998}, \cite{Wason1960}, \cite{Croskerry2002}, \cite{Ellsberg1961a}, \cite{Adamson1952}, \cite{German2005} \\
+    
     \bottomrule
     \end{tabular}
     \caption{Implications from bias when there are time constraints, constraints on how data may be controlled, or it is not clear how data should be used}~\label{tab:biases}
