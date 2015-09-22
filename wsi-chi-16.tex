@@ -19,6 +19,7 @@
 %\pagenumbering{arabic}
 
 % Load basic packages
+\usepackage[table]{xcolor}
 \usepackage{balance}  % to better equalize the last page
 \usepackage{graphics} % for EPS, load graphicx instead 
 %\usepackage[T1]{fontenc}
@@ -33,7 +34,6 @@
 \usepackage{todonotes}
 % \usepackage{natbib}
 \usepackage{array}
-\usepackage{tikz}
 
 % llt: Define a global style for URLs, rather that the default one
 \makeatletter
@@ -167,7 +167,7 @@ Responding to this interest, the race to attract end-user consumers to better an
 
 % Yet despite this industry, political and tech-driven enthusiasm for use of self-logged QS data, clinical uptake has been slow.  For example, even with Apple's partnership with US healthcare providers around the targeted of their HealthKit framework have focused primarily on its use in telemonitoring for randomised controlled trials (RCT) rather than for differential diagnosis.  But even here, problems have been met with some partners pulling out, citing insufficient interest by both patients and physicians~\cite{}.  
 
-% An informal survey by VentureBeat found that clinicians were largely ''simply not interested in FitBit data'', assigning blame on several factors~\cite{venturebeat}. The first was time; doctors cited simply not having the time to look at data brought in by patients.  The second pertained ot access; electronic medical records simply did not admit or integrate patient-supplied data.  Third were concerns about data quality, e.g. that devices available today were simply not yet accurate enough for clinical use.  Finally, doctors expressed legal concerns around use of the data; citing the potential to be held liable for data captured by wearable health sensors.
+% An informal survey by sullivan_guess_2014 found that clinicians were largely ''simply not interested in FitBit data'', assigning blame on several factors~\cite{sullivan_guess_2014}. The first was time; doctors cited simply not having the time to look at data brought in by patients.  The second pertained ot access; electronic medical records simply did not admit or integrate patient-supplied data.  Third were concerns about data quality, e.g. that devices available today were simply not yet accurate enough for clinical use.  Finally, doctors expressed legal concerns around use of the data; citing the potential to be held liable for data captured by wearable health sensors.
 
 \subsection{Evidence Based Medicine: Clinical Decision-Making with Data under Uncertainty} 
 
@@ -187,7 +187,7 @@ Modern texts for nursing and clinical evaluation have formalised the diagnostic 
 
 \subsection{Cognitive Dispositions to Respond}
 
-Recent research has revealed that clinical decision-making is often strongly influenced by cognitive bias, leading to preventable adverse events, worsened patient outcomes, and higher mortality.  Croskerry et al. characterised a ~\citep{Croskerry2013}. \citet{Graber2002} states that cognitive bias is a major cause of preventable diagnostic error, but is extremely challenging to study and reduce. This complements earlier discoveries by \citet{Kahneman1982}, in which people tend to use biases when making decisions under uncertainty, occasionally leading to severe errors. Many forms of cognitive bias have been identified -- Wikipedia lists over 350\footnote{Wikipedia -- List of cognitive biases -- \url{http://en.wikipedia.org/wiki/List_of_cognitive_biases} [Accessed 4th Sep 2014]} -- however, the consequences of biases in clinical decision making remain largely unexplored \citep{Croskerry2013}. It is thus unknown how the provision of patient data may affect bias in clinical decisions.
+Recent research has revealed that clinical decision-making is often strongly influenced by cognitive bias, leading to preventable adverse events, worsened patient outcomes, and higher mortality.  Croskerry et al. characterised a ~\cite{Croskerry2013}. \cite{Graber2002} states that cognitive bias is a major cause of preventable diagnostic error, but is extremely challenging to study and reduce. This complements earlier discoveries by \cite{Kahneman1982}, in which people tend to use biases when making decisions under uncertainty, occasionally leading to severe errors. Many forms of cognitive bias have been identified -- Wikipedia lists over 350\footnote{Wikipedia -- List of cognitive biases -- \url{http://en.wikipedia.org/wiki/List_of_cognitive_biases} [Accessed 4th Sep 2014]} -- however, the consequences of biases in clinical decision making remain largely unexplored \cite{Croskerry2013}. It is thus unknown how the provision of patient data may affect bias in clinical decisions.
 
 % research questions
 % By conducting a literature review of research in cognitive bias over the last 50 years, this dissertation presents a list of 11 cognitive biases which may affect clinical decisions made when patient data is used. From this, it has been identified that supplementing patient data may introduce further bias due to methods clinicians use to interpret patient data. Furthermore, it has been found that these biases usually have a more significant effect when decisions are made in acute scenarios, such as emergency rooms, where decisions must be made quickly with limited resources.
@@ -234,140 +234,90 @@ From an initial set of 2340 results, we identified 429 papers that actually cont
 %
 % @@@@@@@@@@@@@@@@@@@@@@@@@
 
-\def \w {$\bullet$}
+\def \w {\cellcolor{black!100}$\bullet$}
 
 \subsubsection{High-level Themes}
 
-\begin{tikzpicture}
-\draw[step=0.5cm,color=gray] (-1,-1) grid (1,1);
-\node at (-0.75,+0.75) {\cite{chung_more_2015}};
-\node at (-0.25,+0.75) {\cite{ancker_invisible_2015}};
-\node at (+0.25,+0.75) {C};
-\node at (+0.75,+0.75) {D};
-\node at (-0.75,+0.25) {E};
-\node at (-0.25,+0.25) {F};
-\node at (+0.25,+0.25) {G};
-\node at (+0.75,+0.25) {H};
-% ...
-\node at (+0.75,-0.75) {Q};
-\end{tikzpicture}
-
-\begin{tikzpicture}
-\draw[step=0.5cm,color=gray] (-4,-1) grid (22,18);
-\node at (-4,-1) {\textbf{Factor}}
-\node at (0,-1) {\cite{chung_more_2015}}
-\node at (1,-1) {\cite{ancker_invisible_2015}}
-\node at (2,-1) {\cite{becker_mhealth_2014}}
-\node at (3,-1) {\cite{sullivan_guess_2014}}
-\node at (4,-1) {\cite{almalki_use_2015}}
-\node at (5,-1) {\cite{patel_probing_2012}}
-\node at (6,-1) {\cite{Swan2009}}
-\node at (7,-1) {\cite{millar_shared_2004}}
-\node at (8,-1) {\cite{ancker_you_2015}}
-
-% use of IT by clinicians
-\node at (9,-1) {\cite{alsos_mobile_2012}}
-\node at (10,-1) {\cite{frankel_effects_2005}}
-\node at (11,-1) {\cite{zeldes_information_2011}}
-\node at (12,-1) {\cite{chen_unpacking_2011}}
-\node at (13,-1) {\cite{patterson_human_2004}}
-\node at (14,-1) {\cite{schoenberg_weaving_2000}}
-\node at (15,-1) {\cite{vikkelso_subtle_2005}}
-\node at (16,-1) {\cite{hughes_2.0_2008}}
-
-% reliability/accuracy of self-recorded data
-\node at (17,-1) {\cite{demonceau_contribution_2015}}
-\node at (18,-1) {\cite{tsoukalas_data_2015}}
-\node at (19,-1) {\cite{frier_hypoglycaemia_2015}}
-\node at (20,-1) {\cite{khariwala_self-reported_2015}}
-\node at (21,-1) {\cite{dontje_measuring_2015} }}
-
-\node[fill=black] at (0,0) {}
-
-\end{tikzpicture}
-
 
 \begin{table*}
-    \setlength\extrarowheight{0.1cm}
+    \setlength\extrarowheight{0.2cm}
     \setlength\tabcolsep{0pt}
+    %\def\arraystretch{0}
     \centering
-    \begin{tabular}{>{\raggedright}p{4.3cm} |
-        | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} | >{\centering}p{0.6cm} 
-        | >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} 
-        | >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm} >{\centering}p{0.6cm}}
+    \begin{tabular}{>{\raggedright}p{4.3cm} !{\vrule width 1pt}
+        p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} !{\vrule width 1pt}
+        p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm}}
         
-    \toprule
-    & \multicolumn{9}{>{\centering}p{5.4cm}|}{Clinical use of self-recorded data}
-    & \multicolumn{8}{>{\centering}p{4.8cm}|}{Clinical use of IT}
-    & \multicolumn{5}{>{\centering}p{3.0cm}|}{Reliability of self-recording} \\
+    %\hline
+    & \multicolumn{14}{>{\centering}p{8.4cm} !{\vrule width 1pt}}{Self-recorded data}
+    & \multicolumn{8}{>{\centering}p{4.8cm}}{Other forms of data} \\ \hline
     
     \textbf{Factor}
     % use of self-recorded data by clinicians
-    & \cite{chung_more_2015}
-    & \cite{ancker_invisible_2015}
-    & \cite{becker_mhealth_2014}
-    & \cite{sullivan_guess_2014}
-    & \cite{almalki_use_2015}
-    & \cite{patel_probing_2012}
-    & \cite{Swan2009}
-    & \cite{millar_shared_2004}
-    & \cite{ancker_you_2015}
+    & \centering{\cite{chung_more_2015}}
+    & \centering{\cite{ancker_invisible_2015}}
+    & \centering{\cite{becker_mhealth_2014}}
+    & \centering{\cite{sullivan_guess_2014}}
+    & \centering{\cite{almalki_use_2015}}
+    & \centering{\cite{patel_probing_2012}}
+    & \centering{\cite{Swan2009}}
+    & \centering{\cite{millar_shared_2004}}
+    & \centering{\cite{ancker_you_2015}}
     
     % use of IT by clinicians
-    & \cite{alsos_mobile_2012}
-    & \cite{frankel_effects_2005}
-    & \cite{zeldes_information_2011}
-    & \cite{chen_unpacking_2011}
-    & \cite{patterson_human_2004}
-    & \cite{schoenberg_weaving_2000}
-    & \cite{vikkelso_subtle_2005}
-    & \cite{hughes_2.0_2008}
+    & \centering{\cite{alsos_mobile_2012}}
+    & \centering{\cite{frankel_effects_2005}}
+    & \centering{\cite{zeldes_information_2011}}
+    & \centering{\cite{chen_unpacking_2011}}
+    & \centering{\cite{patterson_human_2004}}
+    & \centering{\cite{schoenberg_weaving_2000}}
+    & \centering{\cite{vikkelso_subtle_2005}}
+    & \centering{\cite{hughes_2.0_2008}}
     
     % reliability/accuracy of self-recorded data
-    & \cite{demonceau_contribution_2015}
-    & \cite{tsoukalas_data_2015}
-    & \cite{frier_hypoglycaemia_2015}
-    & \cite{khariwala_self-reported_2015}
-    & \cite{dontje_measuring_2015} } \\
+    & \centering{\cite{demonceau_contribution_2015}}
+    & \centering{\cite{tsoukalas_data_2015}}
+    & \centering{\cite{frier_hypoglycaemia_2015}}
+    & \centering{\cite{khariwala_self-reported_2015}}
+    & \cite{dontje_measuring_2015} \\ \hline
     
-        \midrule 
-    \textbf{Data capture}} \\
-    capture irrelevant/useless things
-        &\w &\w &   &   &   &\w &   &   &   &   &   &\w &   &\w &   &   &   &   &   &   &   &  \\
+    \textbf{Data capture} &&&&&&&&&&&&&&&&&&&&&& \\ \hline 
+    irrelevant/useless
+        &\w &\w &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &\w &   &\w &   &   &   \\ \hline 
     poor data quality
-        &   &   &   &\w &   &\w &   &   &\w &   &   &   &   &\w &   &   &\w &\w &\w &   &   &\w }\\
+        &   &   &   &\w &   &\w &   &   &\w &\w &\w &   &   &\w &   &   &   &   &\w &   &   &\w \\ \hline 
     data incomplete
-        &   &\w &\w &   &   &\w &   &   &\w &   &   &   &   &\w &   &\w &   &   &   &\w &\w &  \\[0.4cm]
-        %\midrule
-    \textbf{Data access}} \\
-    no standard for data representation
-        &\w &\w &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &   &   &  \\
+        &   &\w &\w &   &   &\w &   &   &\w &   &   &\w &\w &   &   &   &   &   &\w &   &\w &   \\ \hline
+
+    \textbf{Data access} &&&&&&&&&&&&&&&&&&&&&& \\ \hline 
+    data representation
+        &\w &\w &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   \\ \hline 
     selective disclosure
-        &\w &\w &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &  \\
+        &\w &\w &   &   &   &   &   &\w &   &   &   &   &\w &   &   &   &   &   &   &   &   &   \\ \hline 
     poor interoperability
-        &\w &\w &\w &   &   &   &   &\w &   &\w &   &   &\w &   &\w &   &   &   &\w &   &   &  \\[0.4cm]
+        &\w &\w &\w &   &   &   &   &\w &   &   &\w &   &   &   &\w &   &   &\w &   &\w &   &   \\ \hline
         %\midrule
-    \textbf{Clinical practice}} \\
-    no standard methods for interpretation
-        &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w \\
+    \textbf{Clinical practice} &&&&&&&&&&&&&&&&&&&&&& \\ \hline
+    interpretation
+        &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w &   &   &   &   &   &   &   &   \\ \hline 
     no data analysis training
-        &\w &   &\w &   &\w &   &\w &   &   &   &   &   &   &\w &   &\w &\w &   &   &   &   &  \\
+        &\w &   &\w &   &\w &   &\w &   &   &   &   &   &   &   &   &   &   &   &\w &   &\w &\w \\ \hline 
     takes time away from patient
-        &\w &   &   &   &   &   &   &   &\w &\w &\w &   &\w &\w &   &   &   &   &   &   &   &  \\
-    threatens professional autonomy
-        &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &  \\
+        &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &\w &\w &   &\w &\w &   &   &   \\ \hline 
+    professional autonomy
+        &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &   \\ \hline 
     legal issues
-        &   &   &\w &\w &   &   &\w &   &   &   &   &   &   &   &   &\w &   &   &   &   &   &  \\[0.4cm]
+        &   &   &\w &\w &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &   \\ \hline
         %\midrule
-    \textbf{Situational constraints}} \\
+    \textbf{Situational constraints} &&&&&&&&&&&&&&&&&&&&&& \\ \hline
     time pressure
-        &\w &   &   &   &   &   &   &   &   &   &\w &\w &   &\w &   &\w &   &   &   &   &   &  \\
+        &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w &   &\w &   &\w &   \\ \hline
     information overload
-        &   &   &\w &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &  \\
+        &   &   &\w &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &   &   &   &   &   \\ \hline
     not worth clinician effort
-        &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &  \\
+        &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
     
-    \bottomrule
+    %\hline
     \end{tabular}
     \caption{Major themes}~\label{tab:biases}
 \end{table*}
@@ -481,7 +431,90 @@ One focus group
 
 Participants in the focus group - seven specialists in the US (six male) and three NHS GPs in the UK.
 
-Can we rely on the data?
+    
+Reorganising information into a medical history
+Five hospital specialists (S1, S2, S3, S4, S5) stated that they needed to reorganise the information that was given to them in the form of a medical case. In particular, they wanted a more complete history so they could understand how the patient’s current even fits within a timeline, or whether it’s a distinct event. GP1 said he needed more specific information about his medication, rather than just “a couple of blood thinners”.
+“for me, there's an incomplete history here. So, you know, the first place I would go is back to the patient, and try to pull out, what are the details of the timeline really, the timeline. Is this a distinct event or are this linked somehow, and pull it out from her, the history.” S2
+“I knew this wasn't a regular medical history. so right away I knew this was just like a New York Times case that you see in the times magazine, so it made me think this is like an oddball thing, it's not just a typical case, we're looking for oddball things, and so reading this, though, trying to approach it like we would in an office, really just looking for things that are more serious, like trying to see what's the worst possible thing that she could have, approaching it that way” S5
+
+Particularly prominent within the session with hospital doctors was the need to reorganise the scenario that aligns and supports their work routines. One hospital specialist explained that it was difficult for them to follow the medical case in the scenarios because they did not provide the patient’s structured medical record which would give greater detail into the patient’s history and flow of interventions in a standard format.
+“this has been going on for a longer period of time and then I got the sense that it started 18 months ago but you know, I would like the confirm that. [...] Was that when it really started? Or is there, in this pattern, you know, along the lines of is this real pathology is this been this pattern of it going on and frequent doctor visits and nothing found, uhm, you know it’s just anything more has she had recent blood work has she had recent x-rays or tests that might tell us that there's real pathology or that there's something to focus in on uhm you know, those kinds of things. “ S3
+
+Because there was no patient, some clinicians role-played the patient:
+“She's a student, third year… probably coming up to exams. Is it a tension headache?” GP1
+“She's a student, I suppose I'm already thinking alcohol psychology.” GP2
+Evaluating the data quality and completeness
+Concerning the heart rate chart, GP1 stated that he would need to understand how the patient recorded that data. One important factor raised was the need to understand if any illness or medication had interacted which may contribute to a change in the patient’s heart rate. GP2 and S2 also mentioned he would need to understand what the patient was doing at the recorded times, particularly during the high peaks. In addition, S2 needed to know what symptoms the patient was experiencing at those times. 
+
+The heart rate chart also provoked comments on the reliability of the data, relating to both the accuracy of the recording equipment and how the patient recorded the data. GP1 explained that he could not assume that the data was “objective” enough, and that spot checking wasn’t enough - he would instead need a trace. He felt he would need to take measurements using his own calibrated equipment, which he could trust:
+“I want to use my machine, which has been precalibrated, not off the shelf, because I don't know about this machine's calibration. Can I trust all the data? No. Can I assume all the data is correct? No. So I have to use a calibrated machine which I feel happy with, that I've used before, and which has an electrician or someone who said this machine is pukka. And then I apply that test; a very quick non-invasive test. I can do a heart trace in here [the GP’s office] to see if I can spot anything as well” GP1
+
+Conversely, S2 suggested that home-monitoring may be more accurate than office-based monitoring due to white-coat hypertension, and the fact that home-based monitoring may happen over a longer period of time.
+Understanding the patient’s motivations
+The patient’s motivations for recording the data was also a factor in determining whether the data should be used. Pertaining the caffeine chart, GP3 stated a need to understand why the patient recorded it, when it is not a normal thing to do:
+“I would try and ask a little bit more about this [referring to caffeine chart] and why she's done this anyway, just to have an understanding, you know, of reasons, because not everyone charts their caffeine intake.” GP3
+
+In particular, S3 suggested that the presentation of the caffeine chart was a way of indirectly telling him that there are underlying psychological issues, such as being overwhelmed and struggling with their studies or job. Referring to both scenarios, S5 asserted that the patient was ‘obsessive’ to record both the data, suggesting an underlying psychological issue. The mere existence of the heart rate plot provoked a similar jump to psychological issues with S4:
+“They’re faking it. If someone brought this chart to me, there’s a red flag that this guy’s got psych issues “ S4
+
+Although S3 raised that it’s common for engineers to bring in these kinds of plots, and S7 proposed that patients bringing in data will become normal practice, the need to understand why the patient recorded the data remained a common theme throughout the discussions. S6 said that a “lot of patients come with a diagnosis that they put on”, with S1 following on from this by saying:
+“It's typical that patients like this that come in and they give you, you get this whole story, and then they want you to focus on this it and it takes your attention away, or they're going to tell you this is the reason why all of this is going on, and then you have to say well ok but let's just put that there.” S1
+
+GP3 also needed to understand why both patients had brought the charts, expressing confusion at their presentation. He wanted to understand what these patients wanted out of their consultations.
+“if all that are normal, and she's still feeling, you know, then again, I would then refer back to that [the chart], especially if she's quite... a student and knowledgeable about that, might be cause to listen. "Hang on, OK, tell me more about this, and why? You know, why are you doing that?".” GP3
+
+GP1 explained that there is a lot of pressure for GPs to prescribe, and that it was necessary to resist this, because patients push for prescriptions of “poorly evidence based things”. 
+Deciding how to use the patient-provided data
+In deciding how the patient-provided data should be used or not, S1 explained that they needed to initially make a decision on how long to spend looking at it
+“I mean I think when you look at something like this you do have to be able in your own mind to say,’ OK am I going to spend 30 seconds on this, or am I really going to spend more time and give it more importance?’Aand I think that's what we face a lot.” S1
+
+S1 explained that these information sources will add layers of data assessment to his practice, and questioned whether this patient-provided information may adversely affect efficient work flow
+“The layers of information, data assessment… You know, it's ramping up and and  all of these devices are certainly adding or could and will add yet more of this, you know, data that, you know, you know…  Certainly here we get a lot of things faxed to us. We get to know patients who come here and then they go somewhere else.  But then we are getting their lab work over and over again—their X-rays, their visits. And you know at some point you have to ask yourself, you know, what is efficient here and what is not?” S1
+
+S7 concurred, explaining that this adds “complexity to an already complex medical interface.” When asked if patient-provided information is a good or a bad thing, there was general agreement within the room. S4 suggested that age of the clinician may be a large factor in acceptance of patient provided data arguing that medics are “creatures of habit”, who do not usually change their practice significantly if their current work practice satisfies their demands (???)   Newly-trained young doctors may become used to patients bringing their own data. He foresaw not changing his own practice within the next 10 years.
+“Whereas the younger doctors that are coming in are seeing patients for the first time and they're used to people bringing in this kind of stuff and will put more thought into it rather than... Doctors are typically creatures of habit. You've been doing something for ten, fifteen years the same way, you're going to carry on doing it. There are minor changes that happen in terms of pathology and diagnostics, but in general you're used to doing it in a certain way... So I think it remains to be seen, but, you know, when I think what I'll be doing in 10 years time in terms of how I'll be managing a patient, it will be very similar.” S4
+
+Need for physical exam, scenario and data alone was not enough. e.g. for ruling out neurological causes.
+
+\begin{quote}
+  ``I haven't even touched him yet. and then I'd do after my history, then I'd do an examination, again feeling the pulse myself, feeling is it strained, quality, character, whether I can do anything to the pulse, and then listening to his heart and doing the various movements and motions sit forward sit back, to see if he's got any murmurs associated with this. see if he's been compliant with his anticoagulants, maybe he is maybe he isn't.'' GP1
+\end{quote}
+
+Using (or ignoring) the patient-provided data
+There were stark differences in how useful the clinicians found the patient-provided information. GP3 chose to ignore the caffeine, he stated that it was irrelevant, but conceded that he may be wrong and may come back to it later. Despite stating that he would also ignore the heart rate plot and it would not have much influence on his decisions, he did observe that there were high peaks, which motivated questions about what the patient was doing at those times. 
+“But certainly, you know, I don't think this [chart] would influence, but I would, you know, the only influence it would have is to try and understand more about why he did this and what he wants out of the consultation” GP3
+
+S4 said the heart rate was “underwhelming,” essentially showing normal heart rate other than twice. GP2 said that the information conveyed in the heart rate plot was not significant, with high rates explained by any activity he could have been doing at the time. GP2 said that blood pressure would have been more useful to her.
+
+S4 stated that the presentation of this information would sway him toward caffeine as a cause:
+“I think if you see her at the office and she brings you this immediately you start thinking you know, this is all from too much caffeine.” S4
+
+GP1 said the caffeine chart suggested a coffee-withdrawal headache. He verbalised a unit conversion in trying to understand how much caffeine 400mg is.
+“right! this could be a coffee headache. Well if you stop drinking coffee you get a headache, if you start drinking coffee you get a headache. Daily consumption -- WOW! - above 400mg - 150mg per cup. Yeah, so this could be a coffee withdrawal headache.” GP1
+
+GP1 went on to suggest that he might advise the patient to have a graded reduction in caffeine. Note in the quote above that GP1 was able to make a unit conversion of caffeine to cups of coffee, and was also able to note that this is an excessive amount. S2, S3 and S5 said they did not know what a normal caffeine level is. Similarly, although S2 made an initial observation of the heart rate chart based on his own beliefs of how heart rate varies, he said he would need to consult a cardiologist to fully understand it:
+“Well one thing that struck me is how little variability there was in the heart rate during the time of the day. I thought that was, I would need to ask a cardiologist, but I thought there was greater variability in heart rate.” S2
+
+Pattern recognition, realising it might not be anything
+“because I don’t know what it is, the other things is - it’s funny on the charts - the last three days are kinda an uptrend. so maybe go talk to the patient and ask: why now, for the last three or four days, are they slowly going up? Whereas before it was up and down. It might not be anything.” S6
+
+One hospital specialist said he would elicit this information directly from the patient. This need for the patient in the room was reciprocated by one GP, who explained that they observe how the patient behaves - how they walk in the room, how they sit down. 
+“the way they sat, or something else, or stomping gate, or something. you're eyes just think oh! and then your connection will be made consciously and unconsciously” GP1
+Using patient-provided data to support risk averse workflow
+S1 made connections between the cases, GP2 used prior experience
+
+Both S3 and S4 explained that they reflect on the scenarios based on their own experience and training within their specialisms
+“as a pulmonologist, which I am, you know, I noted the history of asthma, and I said whatever's going on is not exacerbating her asthma” S3
+
+Linking, unifying
+“we as physicians - how we're trained - I can't help but try to figure out a way to lump all this together, to come with one unifying diagnosis.” S2
+“what are the details of the timeline really, the timeline. Is this a distinct event or are this linked somehow, and pull it out from her, the history. “ S2
+
+S5 also looked for the worst possible thing
+“really just looking for things that are more serious, like trying to see what's the worst possible thing that she could have, approaching it that way. And hopefully it will turn out to be nothing. but I guess that’s, usually, I'm always looking for what's the worst possible thing the person could have and work backwards from there.” S5
+
+GP1 checks with other GPs. GP1 - “common things are common, common presentations of rare conditions are less common than rare presentations of common conditions.”. GP1 said that the knowledge of caffeine consumption changed his perspective on possible causes, though said that although caffeine may seem likely, there could be a far more serious tumor. On the other hand, you have to be economic. A plan which is both economic and risk averse
+“but at the moment I've chopped chopped chopped chop, and we come to here. And now I think right, we've pruned off all of that, now I've got the bare tree - it's distiguous, not perennial. and it's very easy to see, this is my path now. it's your heart, mate. and I need to do just one or two tests to show otherwise this tree... this root or trunk, becomes thicker and I will go that way. that's how I think.” GP1
 
 \subsection{Summary of findings}
 
@@ -491,7 +524,7 @@ Can we rely on the data?
 \subsection{Implications for design}
 
 \subsection{Limitations}
-\susbection{Future Work}
+\subsection{Future Work}
 
 it's not just what the data is, it's who it comes from {your friend, your colleague, your doctor}. is it {a teenager, a female student, a male student, a middle aged man, a middle aged woman}
 
