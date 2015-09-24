@@ -225,35 +225,30 @@ We anticipated that the slow uptake of the use of self-logged QS could potential
 
 \subsection{Literature Review: Method}
 
-We started with a set of search terms broad enough to encompass studies of clinical practice where patient-logged data (both paper-based and digital, manual and automatic) were introduced into a clinical setting.  To do this we searched PubMed, Google Scholar and the ACM DL for keywords ``patient diaries'', ``care diaries'', ``wellbeing diaries'', ``self-report diaries'', ``quantified-self'', ``smartphone apps'', and ``wearable sensors''.
+We started with a set of search terms broad enough to encompass studies of clinical practice where patient-logged data (both paper-based and digital, manual and automatic) were introduced into a clinical setting.  To do this we searched PubMed, Google Scholar and the ACM DL for keywords ``patient diaries'', ``care diaries'', ``wellbeing diaries'', ``self-report diaries'', ``quantified-self'', ``self-tracking'', ``smartphone apps'', and ``wearable sensors''.
 
 Since we wanted to focus on the usage of data by medical experts, we excluded studies about use by patients themselves, such as for feedback, reflection, goal setting and self monitoring, including behaviour-change studies and studies of motivation to self-diaries, which were prevalent from the HCI community.   Focusing only on existing practice, we omitted papers describing new interfaces and systems that have not had substantial adoption.  We also excluded papers discussing the capture side of health diarising and life-logging by patients, except where aspects of capture affected its later use.  We were careful to include papers that discussed any issues relating to the use of patient data in clinical setting, including those that discussed human factors issues specifically, to more broadly  theatres and emergency rooms.
 
 After finding a small set of results, we then broadened our search to include studies that discussed the use of patient data in medical decision-making, including both patient-supplied and clinical data held by providers themselves.  We included ``telemonitoring'', and ``electronic patient records''.  This  hoped to find a broad range of factors spanning human-factors issues to social, cultural, institutional, situational, among others.
 
-For each paper, we identified problem(s) in the clinical use of data, which were first added to a spreadsheet and linked to their original source.  After examining each of the papers, 2 researchers organised the list into themes, attempting to merge all problems with the same underlying cause, while keeping those that did not overlap distinct.  During this process, we identified a set of themes related specifically to cognitive biases, which we analysed and report separately below.
-
-Excluded papers relating to self-recorded data which patients were asked to record by their physicians, such as papers containing the words "telemonitoring" or "telemedicine". Literature reviews were excluded. 
-
-%Papers discussing the accuracy or reliability of self-management did not disc
+For each paper, we identified problem(s) in the clinical use of data, which were first added to a spreadsheet and linked to their original source.  After examining each of the papers, two researchers organised the list into themes, attempting to merge all problems with the same underlying cause, while keeping those that did not overlap distinct.  %During this process, we identified a set of themes related specifically to cognitive biases, which we analysed and report separately below.
 
 \subsection{Literature Review: Results}
 
-
 \begin{table*}[th]
-    \def \w {\cellcolor{blue!40!black}X}
-    \setlength\extrarowheight{0.1cm}
+    \def \w {\cellcolor{blue!40!black}\textcolor{blue!40!black}{X}}
+    \setlength\extrarowheight{0.15cm}
     \setlength\tabcolsep{0.023cm}
     %\def\arraystretch{0}
     \centering
     \small
-    \begin{tabular}{>{\raggedright}p{3.0cm} !{\vrule width 1.3pt}
+    \begin{tabular}{>{\raggedright}p{3.3cm} !{\vrule width 1.3pt}
         p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} !{\vrule width 1.3pt}
         p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm} | p{0.6cm}}
         
     %\hline
     & \multicolumn{14}{>{\centering}p{9.0cm} !{\vrule width 1.3pt}}{\textbf{Self-recorded data}}
-    & \multicolumn{8}{>{\centering}p{5.1cm}}{\textbf{Other forms of data}} \\ \hline
+    & \multicolumn{8}{>{\centering}p{5.1cm}}{\textbf{Patient data}} \\ \hline
     
     % use of self-recorded data by clinicians
     & \centering{\cite{chung_more_2015}}
@@ -298,14 +293,14 @@ Excluded papers relating to self-recorded data which patients were asked to reco
         &\w &\w &\w &   &   &   &   &\w &   &   &\w &   &   &   &\w &   &   &\w &   &\w &   &   \\ \hline
         %\midrule
     \textbf{Clinical practice} &&&&&&&&&&&&&&&&&&&&&& \\ \hline
-    Interpretation
-        &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w &   &   &   &   &   &   &   &   \\ \hline 
+    %Interpretation
+    %    &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w &   &   &   &   &   &   &   &   \\ \hline 
     Data literacy
         &\w &   &\w &   &\w &   &\w &   &   &   &   &   &   &   &   &   &   &   &\w &   &\w &\w \\ \hline 
-    Patient dissatisfaction
-        &\w &   &   &   &   &   &   &   &\w &   &   &   &   &   &\w &\w &   &\w &\w &   &   &   \\ \hline 
-    Professional autonomy
-        &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &   \\ \hline 
+    Doctor-patient relationship
+        &\w &   &   &   &   &   &   &\w &\w &   &   &   &   &   &\w &\w &   &\w &\w &   &\w &   \\ \hline 
+    %Professional autonomy
+    %    &   &   &   &   &   &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &   \\ \hline 
     Legal issues
         &   &   &\w &\w &   &   &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &   \\ \hline
         %\midrule
@@ -314,60 +309,81 @@ Excluded papers relating to self-recorded data which patients were asked to reco
         &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &\w &\w &   &\w &   &\w &   \\ \hline
     Information overload
         &   &   &\w &\w &   &   &   &   &   &   &   &   &   &   &   &   &\w &   &   &   &   &   \\ \hline
-    Effort
-        &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+    %Effort
+    %    &\w &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
     
     %\hline
     \end{tabular}
-    \caption{Major themes}~\label{tab:biases}
+    \caption{Major themes identified within the literature review, separating papers by whether they discussed self-tracked data, or patient data such as telemonitoring or EMRs.}
+    \label{tbl:themes}
 \end{table*}
 
-
-From an initial set of 2340 results, we identified 429 papers that actually contained at least one of the search terms among keywords and the abstract. From here, we identified 22 relevant papers according to the criteria defined above.  From this we derived the 14 themes visible in \ref{fig:themes}, omitting themes pertaining to cognitive dispositions to respond which we discuss next.
-
-% @@@@@@@@@@@@@@@@@@@@@@@@@
-%
-% initially focused on "use of self-recorded data by clinicians", but there is little literature on this. we then broke down the literature review into individual factors:
-% * reliability of self-recorded data
-% * use of IT by clinicians (e.g. EMR)
-% * cognitive factors when clinicians interpret information
-%
-% @@@@@@@@@@@@@@@@@@@@@@@@@
-
+From an initial set of 2340 results, we identified 429 papers that actually contained at least one of the search terms among keywords and the abstract. From here, we identified 22 relevant papers according to the criteria defined above.  From this we derived the 11 themes visible in Table~\ref{tbl:themes}. We categorised the these into four categories: data capture, data access, clinical practice and situational constraints. %, omitting themes pertaining to cognitive dispositions to respond which we discuss next.
 
 \subsubsection{Data capture}
 
+This category pertains to how individuals conduct self-tracking, and the devices used for doing so. Three themes were identified in this category:
+
 \begin{itemize}
-\item \textit{Relevance} - data may be irrelevant, or useless within the context potential barriers to adoption of self-recorded data within clinical practice, derived from literature of clinicians use of IT/mHealth/telemonitoring/patient-recorded data. 
-\item \textit{Quality} - poor data quality - and lack of trust in the recording device/software
-\item \textit{Completeness} - data incomplete, also, is the patient able to provide needed information (e.g. their experiences during an episode)?
+    \item \textit{Relevance}. Individuals have little guidance from clinicians on what they should track, so don't necessarily know what information is relevant to their condition. Without guidance, individuals may devise their own systems of recording information which are not complementary to a clinician's training. They may present irrelevant information to a clinician, or, conversely, may fail to disclose relevant information which they thought was irrelevant. Clinicians may dismiss information which is inapplicable to the current situation.
+    %data may be irrelevant, or useless within the context potential barriers to adoption of self-recorded data within clinical practice, derived from literature of clinicians use of. Inapplicability IT/mHealth/telemonitoring/patient-recorded data. 
+    
+    \item \textit{Quality}. Many consumer devices available for self-tracking and self-logging are not clinical grade, with only a small number having been approved for medical use. Clinicians often perceive the data quality and sampling from non-clinical grade devices to be poor and perceive the devices to be unreliable. Clinicians often are unwilling to use such information out of fear of consequences. Studies have however demonstrated some devices to have good reliability, including the Fitbit wearable tracker.
+    
+    \item \textit{Completeness}. It has been observed that individual's who self log often do so sporadically, leaving out information which may be important. Individuals attributed this to cumbersome tools and the fact that it takes time and effort to track. It has been observed that clinicians look for detailed information to identify patterns and anomalies in data.
+    %data incomplete, also, is the patient able to provide needed information (e.g. their experiences during an episode)?
 \end{itemize}
 
 \subsubsection{Data access}
 
+This category pertains to factors contributing to how individuals access and use self-tracking data. Three themes were identified in this category:
+
 \begin{itemize}
-\item \textit{Representation} - problems relating to data representation - e.g. fitbit vs jawbone. difficult to compare against base rate. heterogeneity - many different types of data that GP's would have to deal. flaggin up of things which are not noteworthy. lack of standardised format. causes ambigiuty - e.g. meaning of column which doesn't specify unit
-\item \textit{Selective disclosure} - patients lie, choose what to disclose. data not shared by patient
-\item \textit{Interoperability} - lack of integration with EMR/viewing system. in modern gp practices, EMR screen is next to patient, so doctor can switch between patient and EMR quickly - incompatible with planned out environment. letting specialists access non telemonitoring data : including diaries, QS tools. no ability to share with specialists
+    \item \textit{Representation}. Health providers use standardised forms for certain types of data, including blood pressure, symptom history and glucose level. However, due to the quantity and variety of self-tracking apps and devices, there is a lack of standardisation of how self-logged data is represented. Furthermore, applying standards to data can remove important parts. Exercise logs, for example, often have distinct data structures and different meanings of `activity level'. It has been observed that this heterogeneity in data representations adds difficulty interpreting self-logged data.
+    %flaggin up of things which are not noteworthy. A lack of flexibility in how information is presented .
+    
+    \item \textit{Selective disclosure}. When presenting information to a clinician, the patient may not realise what information is relevant and fail to disclose it. Some patients raised privacy concerns with sharing information with health providers, raising concerns that information may be used against them. Some patients therefore concealed certain information from their health providers.
+    
+    \item \textit{Interoperability}. A lack of standardisation of how data is represented creates problems when trying to share between colleagues and other health providers. There are concerns that self-tracking tools will be poorly integrated into existing health provider tools. In particular, there are challenges regarding the integration of Web-based services -- which many self-tracking devices and apps are -- into legacy systems. Many self-tracking apps do not provide anyway to export data, or they only do so in propriety APIs, which are not intuitive for clinicians to use.
 \end{itemize}
 
 \subsubsection{Clinical practice}
 
+This category pertains to how clinicians' training affects how effectively self-tracking data can be used, and the potential barriers to introducing self-tracking data to clinical practice. Three themes were identified in this category:
+
 \begin{itemize}
-\item \textit{Relevance} - one physician may use data in a different way to another
-\item \textit{Data literacy} - no standard for data analysis. doctors concerned that they don't have the expertise to interpret and derive conclusions from what they are seeing from patient-derived data. relates to training
-\item \textit{Patient dissatisfaction} - takes time away from patient. e.g. the patient get's upset if the QS is disregarded. in modern gp practices, EMR screen is next to patient, so doctor can switch between patient and EMR quickly - incompatible with planned out environment. harmful to patient relationship: 
-\item \texti{Professional autonomy} - "Professional territorialism and perceived threat to professional autonomy and/or scope of practice" [32] harmful to patient relationship: patient self-diagnosis
-\item \textit{Legal issues} - cannot ensure that such data could be stored securely data protection // liability // data protection
+    %\item \textit{Interpretation} - one physician may use data in a different way to another
+    
+    \item \textit{Data literacy}. Clinicians are concerned that they do not have appropriate expertise or training to effectively use or validate self-logged data. Contributing factors include the large variety of forms of self-logged data, the lack of standards for data representations, the lack of access to appropriate electronic tools for analysis, and not being familiar with new tools for self-quantisation. Clinicians may rely on specialists to interpret the information, but they may not always be available.
+    
+    \item \textit{Doctor-patient relationship}. It has been found that mobile devices can draw attention away from the patient. User interface and physical form factor affect how doctors and patients conduct face-to-face discussion and nonverbal communication. These aspects are crucial because they allow clinicians to better understand the patient's condition, and contribute to patient satisfaction. Exam rooms are often laid out such that clinicians can quickly switch between looking at a computer and the patient, but poor user interface can cause clinicians to spend much longer looking at the computer and disengaging from discussion with the patient. Some clinicians are concerned that patients self-logging may threaten professional autonomy, with concerns that patients may begin to make decisions which would be better made with clinical advice.
+
+    %takes time away from patient. e.g. the patient get's upset if the QS is disregarded. in modern gp practices, EMR screen is next to patient, so doctor can switch between patient and EMR quickly - incompatible with planned out environment.  Patient talks to clinician, clinician is trying to use computer so doesn't listen 
+    
+    %\item \texti{Professional autonomy} - "Professional territorialism and perceived threat to professional autonomy and/or scope of practice" [32] harmful to patient relationship: patient self-diagnosis
+    
+    \item \textit{Legal issues}. Clinicians have raised concerns that the lack of regulation on self-tracking apps and devices has implications for safety, security, data protection, and reliability of using their associated data. Health providers have also raised the issue of liability, particularly if data fell into the wrong hands and exposed them to privacy violations (HIPAA), or if decisions were made based on poor quality data.
 \end{itemize}
 
 \subsubsection{Situational constraints}
 
+This category pertains to constraints that exist within healthcare situations. Two themes were identified in this category:
+
 \begin{itemize}
-\item \textit{Time} - time pressure when seeing the patient - it would take too much time to consume data. time to document when not relevant. EMRs mean new tasks emerge
-\item \textit{Information overload}
-\item \textit{Effort} - perceived usefulness. belief that it won't be worth it - is this a rationale belief? not valuable
+    \item \textit{Time}. Clinicians often need to work within tight time constraints, within which they are already under pressure. Clinicians have been skeptical about how effectively they could use self-logged data within these time constraints. Some said that they could be more effective when working between visits, but that work is not recognised in those times, so are discouraged from doing so. It has been observed that computer interfaces which time a long time to use are frustrating for clinicians. It has been suggested that information overload leads to working inefficiently within time constraints. Clinicians are concerned there is also the time take to document how such data is used, even when it is irrelevant to the current situation.
+    
+    \item \textit{Information overload}. The quantity of information generated by self-tracking tools may be a liability, reducing a clinicians productivity and morale. The way in which information is presented contributes to the extent to which overload affects a user.
+    
+    %\item \textit{Effort}. perceived usefulness. belief that it won't be worth it - is this a rationale belief? not valuable
 \end{itemize}
+
+\subsection{Literature Review: Conclusion}
+
+This literature review has confirmed that a wide variety of factors may contribute to how self-tracked data is used by clinicians. By categorising these themes, we suggest that the factors are introduced in multiple stages. First, data capture is facilitated by patients using self-tracking tools, and the reliability of the tool and how the patient uses it affects how useful a clinician will find that information. Second, patients provide the information to the clinician, perhaps mediated by the self-tracking tool, and clinicians attempt to access and use the data. Third, the clinicians must use this information according to their training and practice. Fourth, the clinician must interpret the information within tight time constraints.
+
+%introduce Markov model?
+
+% We anticipated that the slow uptake of the use of self-logged QS could potentially be attributed to a large number of factors, and thus decided it prudent to first do a survey of medical, quantified-self and HCI literature.  Our objective  was to establish a theoretical framework from which we could then identify areas that could require further investigation, as well as opportunities where research in HCI could potentially help.  
 
 %% party here
 
@@ -389,66 +405,6 @@ From an initial set of 2340 results, we identified 429 papers that actually cont
 
 
 %   UK Prime Minister Gordon Brown,  pronounced in 2008 that more effective ``future will be one of patient power, patients engaged and taking control over their own health and healthcare.'' – Gordon Brown, U.K. Prime Minister
-
-
-
-% functional fixedness - doctors _did_ use the data for other 
-% confirmation bias - using particular data sources to support a particular hypothesis
-% framing
-% functional fixedness
-
-%\subsubsection{Implications from bias}
-
-
-%\begin{table*}
-%     \centering
-%     \begin{tabular}{>{\raggedright}p{1.9cm} p{7.5cm} p{5.8cm} p{1.4cm}}
-%     \toprule
-%     {\small\textbf{Factor}}
-%     & {\small \textbf{Explanation}}
-%     & {\small \textbf{Implications for use of patient-provided data}}
-%     & {\small \textbf{Literature sources}} \\
-%     \midrule
-    
-%     Contextualisation % Problems relating to how a clinians puts a problem in context - their previous experience, framing, approach to risk
-%     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-%             \item \textit{Priming} - exposure to one piece of information influences how another piece of information is perceived.
-%             \item \textit{Availability} - the disposition to judge things as being more likely or frequently occurring if they readily come to mind, such as recent information. % e.g. recent experience  with hearing about a disease may inflate the likelihood of its being diagnosed
-%             \item \textit{Framing} - the way in which a problem is presented affects the outcome of a task.
-%             \item \textit{Risk taking} - clinicians switch between risk aversion and risk taking depending on whether the problem is expressed in terms of the possibility the patient might die or live.
-%         \end{itemize}
-%     & Clinicians see many patients, and their prior decisions or interpretations made with patient-logged data may change how they use new data. Therefore, some pieces of information may become disproportionately relied upon based on inaccurate estimates of frequencies. Further, the patient's approach to providing their data (e.g., why they recorded it) may contribute to a clinicians framing of the problem. This has strong implications for how data may be presented by a patient, and the order data are presented in.
-%     %The order in which self-logged data are presented, and during a presentation of complaints to a physician. Earlier decisions or interpretations may therefore affect the performance of later decisions or interpretations. which may result in an incorrect diagnoses. 
-%     %  A clinician may base their diagnoses on the perceived likelihood of a particular disease, which may be influenced by what the clinician has observed previously,
-    
-%     & \cite{Reay2013}, \cite{Kahneman2012}, \cite{Croskerry2002},  \\
-    
-%     Information interpretation %Bias may affect how information is interpreted
-%     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-%             \item \textit{Illusory patterns} - seemingly meaningful relationships are seen in random data which, despite their statistical insignificant, may be used to influence a decision.
-%             \item \textit{Representativeness} - when presented with information specific to a patient, other sources of data are neglected (e.g., base rates of a particular disease).
-%             \item \textit{Anchoring and adjustment} - the tendency to perceptually lock onto prominent features in a patient’s presentation too early in the diagnostic process, and failing to adjust this initial impression in the light of later information. Anchoring has been found to lead to premature decision making with patients being labelled with a diagnosis early in presentation.
-%             \item \textit{Base rate neglect} - statistical significance of an observation has little influence on its importance in reasoning.
-%         \end{itemize}
-%     & Errors made during information processing may may lead to misdiagnoses, rationalising unusual diseases, overutilisation of resources, and contribute to inaccurate estimates of base rates. An observer's ability to appraise the importance of particular pieces information over others may lead a physician to ignore critical pieces of data that were not among those first noticed, such as base rate, the patient's presentation or the patient's medical record.
-%     & \cite{Whitson2008}, \cite{Kahneman2012}, \cite{Kahneman1978}, \cite{Bar-Hillel1980}, \cite{Croskerry2002}, \cite{Gruber} \\
-    
-%     Metacognition % The cognitive state of the clinician
-%     &   \begin{itemize} \parskip0pt \vspace{-2.4mm}
-%             \item \textit{Affect heuristic} - a clinician's emotional state can significantly affect their interpretation of patient data and their decisions
-%             \item \textit{Confirmation bias} - findings are emphasised based on if they support one's own desires or beliefs
-%             \item \textit{Selective exposure} - people are less willing to eliminate an original hypothesis, with a person attributing unjustified rationality to that hypothesis based on their pre-existing views.
-%             \item \textit{Ambiguity effect and outcome bias} - if the probability of favourable outcome is only available for some options, other options tend not be considered, also causing the belief that favourable outcomes are more likely.
-%             \item \textit{Functional fixedness} - limitations of tools or analysis techniques may lead to a relying on known examples, which may limit insights which may be gained from data
-%             \item \textit{Appropriation difficulty} - problem solving has been demonstrably less effective when a solution requires atypical use of an object
-%         \end{itemize}
-%     & Data interpretations and decisions made using data are ways impacted by emotion and irrational belief in an original hypothesis, despite evidence to the contrary. This may lead to errors and adverse events including incorrect and missed diagnoses. Further, the inability of a clinician to use appropriate data effectively increases the time cost of using data, and limits the capability of a clinician to gain insight from data. In specialist clinical roles, this may lead to only using data in ways that they have been trained in their specialism.
-%     & \cite{Kahneman2012}, \cite{Finucane1998}, \cite{Nickerson1998}, \cite{Wason1960}, \cite{Croskerry2002}, \cite{Ellsberg1961a}, \cite{Adamson1952}, \cite{German2005} \\
-    
-%     \bottomrule
-%     \end{tabular}
-%     \caption{Implications from bias when there are time constraints, constraints on how data may be controlled, or it is not clear how data should be used}~\label{tab:biases}
-% \end{table*}
 
 
 \section{Methodology}
@@ -657,8 +613,6 @@ GP1 checks with other GPs. GP1 - ``common things are common, common presentation
 % = Intro - summarise findings, introduce themes=
 
 
-Self-Logged Data as Part of a Clinician's Workflow}
-
 % == Summarise relevant findings ==
 %    lack of integration into workflow
 
@@ -669,26 +623,52 @@ Standardise it?
 
 \subsection{Design for Constraints} % (support & respect clinical workflow?)
 
-Lacking expertise to use data --> ease of use
-Adds complexity to practice --> ease of use
-Using data may be inefficient --> ease of use
-Is more data always better?
-Wanting to consult with colleagues
-Information overload
-Doesn't fit my speciality
+% What did we observe?
+% EXPERTISE, SPECIALITY, COMPLEXITY, TIME, EFFORT 
+% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
+% DATA LITERACY, SITUATIONAL CONSTRAINTS[TIME,OVERLOAD,EFFORT]
+% How can we make QS apps better?
+
+
+Our literature review revealed that clinicians are concerned with their lack of expertise in using self-logged data and that it may be inefficient to use within tight time constraints. Within our experiment, we observed that clinicians did indeed not always have the expertise the effectively use the patient-provided data. This was particularly prevalent with the caffeine chart, with many of the clinicians unable to effectively use the information because they weren't familiar with a normal caffeine level. Similarly with the heart rate chart, a number of clinicians said they were not confident in interpreting the data, and would need consult a cardiologist to help interpret or validate their findings. 
+
+Building on this, clinicians raised concerns that the introduction of patient-provided data may add complexity to their practice, and they would need to make a judgement on whether using this information is efficient, and how much time they should spend on it. Supporting this judgement may therefore allow self-logged data to be more effectively used within clinical settings -- by visually illustrating the relevance of self-logged data to a scenario, the quality of the data, whether it compliments the clinician's training, and so on, a clinician can more quickly and reliably decide whether to use it.
+
 
 \subsection{Support risk aversion} % (support & respect clinical workflow?)
+
+
+% What did we observe?
 Our findings suggest the clinicians followed different workflows. Number of GP's small. Big variation in style of practice. Risk mitigation in common. 
 Suggest that Quantified Self data, when introduced, should be able to support risk mitigation - that is, a clinician rules out the worst diagnoses first.
-e.g. keep them alive without interfering too much
-Risk mitigation: Ranking hypotheses by risk
-Withholding judgement
-Trying to link information together
-How they're trained
-Common things are common, but not helpful in rare conditions
-    what if it's a tumor?
+Reflecting on their training:
+* RISK AVERSE: Clinicians followed a risk averse strategy - rule out worst first (Ranking hypotheses by risk; what if it's a tumor?)
+* STATISTICAL: Clinicians based their judgements on statistics (Common things are common, but not helpful in rare conditions)
+* IRRELEVANT: Clinicians discarded data because it was not relevant to the worst case
+* WITHHOLD JUDGEMENT: Clinicians were cautious to intervene (Withholding judgement; keep them alive without interfering too much)
+* UNIFYING DIAGNOSIS: Clinicians tried to link information together to find a unifying diagnosis
+
+% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
+
+* RELEVANCE
+
+% How can we make QS apps better?
+
+
+
 
 \subsection{Need to understand patient motivations}
+
+% What did we observe?
+
+% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
+
+* SELECTIVE DISCLOSURE
+* PATIENT SATISFACTION
+
+% How can we make QS apps better?
+
+
 Clinicians should be aware that more people will do this (they're not obsessed)
 Patients will be bringing more data
 QS should highlight dangers of self-diagnosis (patients should not be coming with a diagnosis)
@@ -697,6 +677,16 @@ Data as a symptom
 * will patients be dissatisfied when doctors dismiss data
 
 \subsection{QS is a supplement - patient needs to be there}
+
+% What did we observe?
+
+% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
+
+* COMPLETENESS
+
+% How can we make QS apps better?
+
+
 need for physical exam, how they walk in, talking to patient
 implications for doctors on social nets
 stereotyping?
@@ -705,6 +695,20 @@ Immediate dismissal of data
 Psych issues.
 
 \subsection{Representation: presentation in form of a medical record} % (representational flexibility)
+
+% What did we observe?
+
+% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
+
+* QUALITY
+* COMPLETENESS
+* REPRESENTATION
+* INTEROPERABILITY
+* INTERPRETATION
+* DATA LITERACY [already mentioned]
+
+% How can we make QS apps better?
+
 * Confirmation bias
 * Interpreting according to personal belief
 * Data more trustworthy when it appears normal
