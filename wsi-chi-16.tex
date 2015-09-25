@@ -109,11 +109,10 @@
 \maketitle
 
 \begin{abstract}
-While the \emph{Quantified Self} movement has largely centred around the individual’s own use of his or her data, the same kinds of patient-captured information about their well-being could, in theory, facilitate more accurate and effective medical diagnosis and treatment.  In practice, however, introducing such data during in a way that they can be used effectively and without additional risk during patient visits and hospital episodes creates significant challenges, that we believe, HCI research can help.  In this paper, we seek to understand the primary bottlenecks to the use of QS data during patient visits in both primary and secondar (specialist) care through a literature survey and group 
-
+While the \emph{Quantified Self} and personal informatics fields have studied ways to improve an individual’s own use of self-captured data about their health, activities and well-being, the same kinds of data could, in theory, be used to improve diagnoses and care planning.  In practice, however, introducing such data into any clinical process in a way that they can be used effectively and without additional risk, such as during patient visits and hospital episodes, creates significant challenges that HCI research may be able to help overcome.  In this paper, we seek to understand both the primary bottlenecks and opportunities for the use of QS data for differential diagnosis and care planning during patient visits to both primary and secondary care. We conducted a literature review to identify previous studies about the use of QS data in clinical settings, which informed the design of a  through one-on-one interviews, and group role-play diagnosis exercises.  Our analysis reveals multiple opportunities for the use of QS in a differential diagnosis workflow, identifying capture, representational and use limitations to current QS tools that prevent them from being easily interpreted, contextualised, and applied by clinicians to derive a patient's prognosis and plan of care.
 \end{abstract}
 
-\keywords{Quantified Self; mHealth; Clinical Decision-Making}
+\keywords{Quantified Self; Self-Tracking; mHealth; Clinical Decision-Making}
 
 \category{H.5.m.}{Information Interfaces and Presentation
   (e.g. HCI)}{Miscellaneous} \category{See
@@ -122,13 +121,13 @@ While the \emph{Quantified Self} movement has largely centred around the individ
 
 \section{Introduction}
 
-Empowering patients ``take charge'' of their health is an idea frequently championed by politicians~\cite{brown, obama}, technologists~\cite{ihealth}, journalists~\cite{goetz} and healthcare experts alike~\cite{swan2012health}.  Yet, despite countless government and industry-led initiatives across Europe, the UK, and North America, to inspire this ``patient-led healthcare revolution'', it has yet to happen.  
+Empowering patients to ``take charge'' of their health is an idea frequently championed by politicians \cite{brown, obama}, technologists~\cite{ihealth}, journalists~\cite{goetz} and healthcare experts alike~\cite{swan2012health}.  Yet, despite both government and industry-led initiatives across Europe and North America, to encourage this ``patient-led healthcare revolution,'' it has yet to happen.  
 
-One area, however, where individuals have been taking the lead in trying to understand their own health, is the \emph{Quantified Self} movement \cite{}, primarily comprised of hobbyists and non-health experts who use technological tools to meticulously record and interrogate the minutiae of their physical and mental states over time.   As the population of those interested in self-tracking grew and attracted mainstream interest, the industry has swiftly responded to the expanding demand for self-tracking tools and technologies with a now enormous collection of wearable and embeddable sensors.  These technologies now enable people to record and keep track of aspects of their health with less effort and better fidelity than ever previously, and will continue to improve such as by being less invasive, more comfortable, and more accurate.
+One area, however, where individuals have been taking the lead in trying to understand their own health is the \emph{Quantified Self} movement \cite{}, primarily comprised of hobbyists and non-experts ordinary people who use technological tools to record and interrogate the minutiae of their physical and mental states over time.   As the population of those interested in self-tracking grew and attracted mainstream interest, the industry has responded to the expanding demand for self-tracking tools and technologies with a vast collection of wearable and embeddable sensors.  These technologies now enable people to record and keep an accurate record of their health with less effort and better fidelity than previously, and will continue to improve by bcoming less invasive, more comfortable, and more accurate.
 
 While the direct application of such sensors to understanding patients' particular symptoms, situations and lifestyles in the healthcare context would seem straightforward, most physicians today avoid or outright reject the use of self-logged QS data. Even when this information is provided by patients and is reference, it is still rarely, if ever, used for differential diagnosis.  
 
-What are the barriers to the use of self-logged QS data in critical clinical decision making settings?  This is a delicate question to approach for several reasons; first, during the a course of a single patient visit, there may be many kinds of decisions made by a plurality of medical professionals in different roles, in similarly diverse settings.   Paramedics in an ambulance, triage nurses within an emergency room, specialists in a acute care unit or hospital wards, to general practitioners (GPs) in their surgeries, all make decisions regarding a patient under very distinct situational and informational constraints~\cite{croskerry}. Second, even if focus is centred around a single setting, by a single class of medical professionals, such as GP surgeries, there may be significant disparities in the ways different GPs do things; for example, the degree to which GPs use electronic medical records (EMRs)~\cite{hunt} to organise patient data, prescribe particular tests or treatments~\cite{}, or the mechanism and method that they use to maintain good patient relationships~\cite{} can be highly inconsistent. Finally, clinical decision making is a field that is not only long established, but one of the most specialised occupations in the modern workforce; therefore, understanding the effects of the introduction of any new information into such a setting requires an in-depth understanding of the processes, training and tradition.
+What are the barriers to the use of self-logged QS data in critical clinical decision making settings?  This is a delicate question to approach for several reasons: first, during the a course of a single patient visit, there may be many kinds of decisions made by a different clinicians in different roles in diverse settings.   Paramedics in an ambulance, triage nurses within an emergency room, specialists in a acute care unit or hospital wards, to general practitioners (GPs) in their surgeries, all make decisions regarding a patient under very distinct situational and informational constraints~\cite{croskerry}. Second, even if focus is centred around a single setting, by a single class of medical professionals, such as GP surgeries, there may be significant disparities in the ways different GPs do things; for example, the degree to which GPs use electronic medical records (EMRs)~\cite{hunt} to organise patient data, prescribe particular tests or treatments~\cite{}, or the mechanism and method that they use to maintain good patient relationships~\cite{} can be highly inconsistent. Finally, clinical decision making is a field that is not only long established, but one of the most specialised occupations in the modern workforce; therefore, understanding the effects of the introduction of any new information into such a setting requires an in-depth understanding of the processes, training and tradition.
 
 For our investigation, we focused on two different roles: primary care physicians on the ``frontline'' of the medical service, and secondary care specialists who work in hospitals in specialised units.  In our investigation, we sought to understand the fundamental nature of the barriers to adoption of broadly-classed 'self-logged' patient data, particularly of the most common types facilitated by the many kinds of consumer health monitoring tools becoming available.  That is, we wished to identify whether reasons that such self-logged data were still, so often, deemed useless by clinical professionals, included \emph{what} was captured, how it was captured, the ways in which it was represented or made available during a patient consultation, or  due to other, yet unidentified problems derived from looking at or processes required to derive insight from it.  From this, we wished to extrapolate how such problems might help be shaping and solved through HCI research, such as by re-thinking tools people used to monitor themselves, the kinds of data they captured, or the ways that physicians and medical professionals might access and use it, towards the visions of eHealth and mHealth set out so often in the popular press (e.g. ~\cite{goetz, thingy, thingy}).
 
@@ -433,31 +432,28 @@ The research team individually analyzed each transcript, swapped analyzed transc
 \section{Results}
 
 Participants in the focus group - seven specialists in the US (six male) and three NHS GPs in the UK.
-
     
-    
-\subsection{Reorganising information into a medical history}
-Five hospital specialists (S1, S2, S3, S4, S5) stated that they needed to reorganise the information that was given to them in the form of a medical case. In particular, they wanted a more complete history so they could understand how the patient’s current even fits within a timeline, or whether it’s a distinct event. GP1 said he needed more specific information about his medication, rather than just ``a couple of blood thinners''.
+\subsection{Reorganising information into a structured medical history}
+Five hospital specialists (S1, S2, S3, S4, S5) stated that they needed to reorganise the information that was given to them in the form of a medical case. In particular, they wanted a more complete history so they could understand how the patient’s current even fits within a timeline, or whether it’s a distinct event. GP1 said he needed more specific information about his medication, rather than just ``a couple of blood thinners''. S2 and S3 said they needed to understand how the provided evidence fits into the patient's timeline.
 
 \begin{quote}
-    ``for me, there's an incomplete history here. So, you know, the first place I would go is back to the patient, and try to pull out, what are the details of the timeline really, the timeline. Is this a distinct event or are this linked somehow, and pull it out from her, the history.'' S2
+    ``did it really start 18 months ago? Was that when it really started? Or is there, in this pattern, you know, along the lines of is this real pathology is this been this pattern of it going on and frequent doctor visits and nothing found, uhm, you know it’s just anything more has she had recent blood work has she had recent x-rays or tests that might tell us that there's real pathology or that there's something to focus'' S3
 \end{quote}
 
-Particularly prominent within the session with hospital doctors was the need to reorganise the scenario that aligns and supports their work routines. One hospital specialist explained that it was difficult for them to follow the medical case in the scenarios because they did not provide the patient’s structured medical record which would give greater detail into the patient’s history and flow of interventions in a standard format.
+%\begin{quote}
+    %``for me, there's an incomplete history here. So, you know, the first place I would go is back to the patient, and try to pull out, what are the details of the timeline really, the timeline. Is this a distinct event or are this linked somehow, and pull it out from her, the history.'' S2
+%\end{quote}
 
-\begin{quote}
-    ``this has been going on for a longer period of time and then I got the sense that it started 18 months ago but you know, I would like the confirm that. [...] Was that when it really started? Or is there, in this pattern, you know, along the lines of is this real pathology is this been this pattern of it going on and frequent doctor visits and nothing found, uhm, you know it’s just anything more has she had recent blood work has she had recent x-rays or tests that might tell us that there's real pathology or that there's something to focus in on uhm you know, those kinds of things.'' S3
-\end{quote}
 
-Because there was no patient, some clinicians role-played the patient:
+%Because there was no patient, some clinicians role-played the patient:
 
-\begin{quote}
-    ``She's a student, third year… probably coming up to exams. Is it a tension headache?'' GP1
-\end{quote}
+%\begin{quote}
+%    ``She's a student, third year… probably coming up to exams. Is it a tension headache?'' GP1
+%\end{quote}
 
-\begin{quote}
-    ``She's a student, I suppose I'm already thinking alcohol psychology.'' GP2
-\end{quote}
+%\begin{quote}
+%    ``She's a student, I suppose I'm already thinking alcohol psychology.'' GP2
+%\end{quote}
 
 \subsection{Evaluating the data quality and completeness}
 
@@ -466,11 +462,14 @@ Concerning the heart rate chart, GP1 stated that he would need to understand how
 The heart rate chart also provoked comments on the reliability of the data, relating to both the accuracy of the recording equipment and how the patient recorded the data. GP1 explained that he could not assume that the data was ``objective'' enough, and that spot checking wasn’t enough - he would instead need a trace. He felt he would need to take measurements using his own calibrated equipment, which he could trust:
 
 \begin{quote}
-    ``I want to use my machine, which has been precalibrated, not off the shelf, because I don't know about this machine's calibration. Can I trust all the data? No. Can I assume all the data is correct? No. So I have to use a calibrated machine which I feel happy with, that I've used before, and which has an electrician or someone who said this machine is pukka. And then I apply that test; a very quick non-invasive test. I can do a heart trace in here [the GP’s office] to see if I can spot anything as well'' GP1
+    ``I want to use my machine, which has been precalibrated, not off the shelf, because I don't know about this machine's calibration. Can I trust all the data? No. Can I assume all the data is correct? No. So I have to use a calibrated machine which I feel happy with, that I've used before, and which has an electrician or someone who said this machine is pukka. 1eAnd then I apply that test; a very quick non-invasive test. I can do a heart trace in here [the GP’s office] to see if I can spot anything as well'' GP1
 \end{quote}
 
 Conversely, S2 suggested that home-monitoring may be more accurate than office-based monitoring due to white-coat hypertension, and the fact that home-based monitoring may happen over a longer period of time.
-Understanding the patient’s motivations
+
+
+\subsection{Understanding the patient’s motivations}
+
 The patient’s motivations for recording the data was also a factor in determining whether the data should be used. Pertaining the caffeine chart, GP3 stated a need to understand why the patient recorded it, when it is not a normal thing to do:
 
 \begin{quote}
@@ -523,8 +522,7 @@ Need for physical exam, scenario and data alone was not enough. e.g. for ruling 
     ``I haven't even touched him yet. and then I'd do after my history, then I'd do an examination, again feeling the pulse myself, feeling is it strained, quality, character, whether I can do anything to the pulse, and then listening to his heart and doing the various movements and motions sit forward sit back, to see if he's got any murmurs associated with this. see if he's been compliant with his anticoagulants, maybe he is maybe he isn't.'' GP1
 \end{quote}
 
-
-\subsection{Using (or ignoring) the patient-provided data}
+%\subsection{Using (or ignoring) the patient-provided data}
 
 There were stark differences in how useful the clinicians found the patient-provided information. GP3 chose to ignore the caffeine, he stated that it was irrelevant, but conceded that he may be wrong and may come back to it later. Despite stating that he would also ignore the heart rate plot and it would not have much influence on his decisions, he did observe that there were high peaks, which motivated questions about what the patient was doing at those times. 
 
@@ -619,35 +617,35 @@ GP1 checks with other GPs. GP1 - ``common things are common, common presentation
 Differences in how patient data is used
 Standardise it?
 
-\subsection{Support Risk Aversion} % (support & respect clinical workflow?)
+\label{sec:riskmit}\subsection{Support Risk Mitigation} % (support & respect clinical workflow?)
 
 
 % What did we observe?
-Our findings suggest that clinicians follow a risk-averse strategy, ruling out worst-case scenarios first. For example, in the caffeine case, clinicians wanted to first rule out any threatening diagnoses before seeing if the data supported a diagnosis of caffeine overdose. However, their judgement is also based on statistics, with the knowledge that more common conditions are common, and medical tests being expensive, decisions must be made on an economic basis as well as risk averse. Still, we observed that clinicians often ignored data, at least initially, because it did not support their hypothesis of a worst-case scenario, and that physical examination and tests would be required to rule that out. Clinicians suggested that they would return to this data if it supports a later hypothesis.
+Our findings suggest that clinicians follow a risk-mitigating strategy, ruling out worst-case scenarios first. While considering worst-case scenarios, self-logged data was not always relevant, and clinicians instead wanted to focus on physical examination and medical tests. For example, in the caffeine case, clinicians wanted to first rule out any life-threatening diseases, such as a brain tumour, before seeing if the data supported a diagnosis of caffeine overdose. Self-logged is not useful if it does not support the current hypothesis, but may become more useful in later hypotheses.
 
-Clinicians needed to restructure information as a patient record, a format they are familiar with. This format supports risk mitigation by presenting information in a particular order. For example, risk factors are made prominent, allowing clinicians to identify potential high-risk diagnoses. We noted that doctors were annotating the scenario documents in trying to format the scenario as a patient record, such that important risk-factors and markers for particular diseases were made more prominent. The patient-supplied data was only every referred to after doing this, suggesting that it was not considered particularly important for ruling out worst-case scenarios.
+However, their judgement was also influenced by statistics and economics. Doctors are trained to recognise that common conditions are common, so will weight their consideration of worst-case scenarios against their likeliness. Furthermore, rare conditions are usually more expensive to test for, requiring more bespoke and time-consuming tests. For these reasons, doctors will not try to rule out worst-case scenarios based on their severity alone, but also on their probability and economic costs. This suggests that, while not immediately useful, self-logged data may still become useful early in the diagnostic process if it relates to a common condition or condition that is economic to test for.
+
+%, and medical tests being expensive, decisions must be made on an economic basis as well as risk averse.
+
+% Still, we observed that clinicians often ignored data, at least initially, because it did not support their hypothesis of a worst-case scenario, and that physical examination and tests would be required to rule that out.
+
+Patient records are structured in a way to support this form of risk mitigation by presenting information in a particular order and style. For example, risk factors and disease markers are made prominent, allowing clinicians to identify high-risk diagnoses. We observed that clinicians had difficulty using the information they were given as it did not conform to the structure of a patient record that they were familiar with. They were unable to establish how particular parts of the scenario related to one another, and were not clear on how much was relevant to the patient's current condition. They tried to restructure the information as a patient record, but in doing so noted that there was information missing about the timeline of the events and how the patient-supplied data fits within that timeline. When presented as a separate information source, it is not clear how patient-supplied data fits within the patient's timeline.
+
+Our literature review only revealed a small aspect of this relating the importance of relevance. When data is not relevant to the patient's condition, it may be discarded by the clinicians. Building on this, we suggest it must be relevant to a working hypothesis to be considered. Data is not used opportunistically, clinicians don't just use the data because it may fit a possible hypothesis. 
+
+To integrate well into current clinical practice, self-tracking will need to support the risk-averse strategy used by clinicians. Clinicians need to understand how self-tracked data is relevant to current hypotheses... Support ruling out hypotheses... By adopting principles used in presenting patient records records ... How it fits into a patient timeline... Form part of patient records... Medical records design for safety critical situations...
 
 
-
-% wanted information presented in medical record - easier to reason about multiple case (used to a particular form), ordered to support diagnostic workflow (presenting complaint first, risk factor, social history), know where to look, refined over decades
-
-Suggest that Quantified Self data, when introduced, should be able to support risk mitigation - that is, a clinician rules out the worst diagnoses first.
-
-
-Reflecting on their training:
-* WITHHOLD JUDGEMENT: Clinicians were cautious to intervene (Withholding judgement; keep them alive without interfering too much)
-* UNIFYING DIAGNOSIS: Clinicians tried to link information together to find a unifying diagnosis
+%* WITHHOLD JUDGEMENT: Clinicians were cautious to intervene (Withholding judgement; keep them alive without interfering too much)
 
 % How do they relate to the literature. did it correspond to a particular theme? support or contrast?
 
 % RELEVANCE - Individuals have little guidance from clinicians on what they should track, so don't necessarily know what information is relevant to their condition. Without guidance, individuals may devise their own systems of recording information which are not complementary to a clinician's training. They may present irrelevant information to a clinician, or, conversely, may fail to disclose relevant information which they thought was irrelevant. Clinicians may dismiss information which is inapplicable to the current situation.
 
-% How can we make QS apps better?
+% need for physical exam, how they walk in, talking to patient, Psych issues.
 
 
-
-
-\subsection{Design for Constraints} % (support & respect clinical workflow?)
+\subsection{Design for Situational Constraints} % (support & respect clinical workflow?)
 
 % What did we observe?
 % EXPERTISE, SPECIALITY, COMPLEXITY, TIME, EFFORT 
@@ -656,18 +654,28 @@ Reflecting on their training:
 % How can we make QS apps better?
 
 
-Our literature review revealed that clinicians are concerned with their lack of expertise in using self-logged data and that it may be inefficient to use within tight time constraints. Within our experiment, we observed that clinicians did indeed not always have the expertise to effectively use the patient-provided data. This was particularly prevalent with the caffeine chart, with many of the clinicians unable to effectively use the information because they weren't familiar with a normal caffeine level. Similarly with the heart rate chart, a number of clinicians said they were not confident in interpreting the data, and would need consult a cardiologist to help interpret or validate their findings. % unfamiliar with tis type of data analysis, unable to determin significance; 
+Our literature review revealed that clinicians are concerned with their lack of expertise in using self-logged data and that it may be inefficient to use within tight time constraints. Within our experiment, we observed that clinicians did indeed not always have the expertise to effectively use the patient-provided data. This was particularly prevalent with the caffeine chart, with many of the clinicians unable to effectively use the information because they weren't familiar with a normal caffeine level. We suggest that the primary reason for this was that caffeine is an atypical measurement for clinicians, in contrast to, for example, blood pressure, which is commonly measured in many clinical settings. Without the experience or training in using caffeine measurements, clinicians are unable to make any meaningful use of the data.
 
-% dimensions not normally measures; why caffeine?; heterogeneity
+With the heart rate chart, a number of clinicians said they were not confident in interpreting the data, and would need consult a cardiologist to help interpret or validate their findings. We suggest that this is because clinicians are unfamiliar with the analysis process required to distinguish salient features from noise. While clinicians are familiar with heart rate as a measurement, they are not used to being presented with heart rate information in a continuous form. Clinicians would normally expect only significant findings to be presented, such as days on which the patient's heart rate was out of a normal range.  When clinicians order tests for patients, the results are aggregated by specialists such that clinicians may quickly look for important markers. For example, results haematinics tests (tests for vitamins, folic acid etc) are presented with the result of each individual test highlighted if out of normal range. This allows a clinician to quickly interpret the information without needing to consider the significance of each result. There are some continuous data formats that clinicians are used to, such as ECGs, but interpreting these forms part of their training as medical doctors.
 
-% expertise: what's noise, and what's signal - making it easier to find salient features; raw data vs significant (continuous - identifying patterns in a trace, but may have taken months of training; most are not continuous)
+% predigest against a population normal - easier to use
+% personlised / stratisfied medicine - compare against a people of the same demographics
+
+The emergence of The Quantified Self has already demonstrated that there exists heterogeneity in types of measurement, many of which will be unfamiliar to clinicians. We suggest that tools be designed to make it easier for clinicians to use unfamiliar forms of data. By comparing a person's measurements against a population average, salient features may be made more prominent. Continuous information may be better initially presented as aggregated data, highlighting significant events. This links back to the suggestions in Section~\ref{sec:riskmit}, where information presented in medical records tend to have the most significant pieces of information displayed most prominantly.  %Clinicians can then navigate to those events on the continous data
 
 Building on this, clinicians raised concerns that the introduction of patient-provided data may add complexity to their practice, and they would need to make a judgement on whether using this information is efficient, and how much time they should spend on it. Supporting this judgement may therefore allow self-logged data to be more effectively used within clinical settings -- by visually illustrating the relevance of self-logged data to a scenario, the quality of the data, whether it compliments the clinician's training, and so on, a clinician can more quickly and reliably decide whether to use it.
 
+% heterogeneity
+
+
+% - do the statistical tests
+% "it goes up, but is that a siginificant increase?"
+% highlight salient features, so it's easier to determine the significant features against noise
 
 
 
-\subsection{Need to understand patient motivations} 
+
+\subsection{Explain the Patient's Motivations for Self-Tracking} 
 
 % What did we observe?
 
@@ -680,19 +688,32 @@ Building on this, clinicians raised concerns that the introduction of patient-pr
 
 % psychology why the data was logged - 
 % three classes of self-logged data:
-%  - patient - sometimes it will be curiosity/obsession (e.g. they have just happen to have a device), or 
-%  - patient - standard mechanisms of tracking illness, 
+%  - patient - sometimes it will be curiosity/obsession (e.g. they have just happen to have a device), or  -- (doctor asks why are you doing this? self diagnosis. could be a panic attacks, but it could be something unrelated -- af; hypochondria)
+%  - patient - standard mechanisms of tracking diagnostics illness, e.g. high blood pressure
 %  - clinician - prescribed (e.g. telemonitoring)
 % ->implications for data believability - 
+%
+% design challenges:
+% - difficulty with dealing with first class
 
-Clinicians should be aware that more people will do this (they're not obsessed)
-Patients will be bringing more data
-QS should highlight dangers of self-diagnosis (patients should not be coming with a diagnosis)
-Data as a symptom
-* GP said he would respect patient's efforts
-* will patients be dissatisfied when doctors dismiss data
+Clinician's found it extremely important to understand the reasons that the patient chose to self-track and why they presented the information to the clinician. Without this understanding, clinicians were unable to understand how the data was relevant, and suggested that the provision of the information may have different meanings, from a psychological obsession, to genuine concern for organic disease. Drawing from this, we propose that clinicians were trying to discern from three classes of self-logged data. The first class describes data which the patient recorded voluntarily, with no clinical advice, out of curiosity, personal goals, or obsession. This class includes, for example, data which was recorded by an activity tracker for the purpose of getting fit. The second class describes data which has been recorded as a result of being diagnosed with an illness. This class would include, for example, recording blood pressure after being diagnosed with hypertension. The third class describes data which has been recorded as a result of a clinicians instructions. This includes, for example, telemonitoring devices, such as implantable ECGs, as a result of a diagnosis of arrhythmia.
 
-\subsection{Data quality / prov}
+Both the caffeine chart and heart rate chart fell within the first class, and as such prompted questions about why the patient felt the need to record this data, whether it was evidence that the patient had self-diagnosed themselves, and if the presence of the data was a symptom of an underlying psychological issue, such as obsession, stress, or comorbid psychiatric disorder. For these reasons, clinicians were skeptically of the accuracy of the data, suggesting that the patient may have motivation to manipulate or fake the data so they can force a particular outcome from the consultation.
+
+We suggest that, with the increasing prevalence of wearable technology and self-tracking apps, patient's will be presenting data of the first class more often, and that a primary motivation of doing so will be that the patient has the data anyway. However, one danger we have identified is that patients may be presenting this information in the form of a self-diagnosis -- recording a presenting a plot of caffeine use may suggest the patient believes they are suffering effects of a caffeine related illness, such as withdrawal. For that reason, it is important that self-tracking technology warn the user that these devices should not be used for the purpose of self-diagnosis, and that only qualified clinicians should make those judgements.
+
+In order to make the patient's motivations for recording data clearly, tools may ask the patient why they are recording it, and if it is out of medical advice to do so, or the user's own choice. In presenting the information to a clinician, they can therefore be made aware of the patient's motivations.
+
+%Clinicians should be aware that more people will do this (they're not obsessed)
+%Patients will be bringing more data
+%QS should highlight dangers of self-diagnosis (patients should not be coming with a diagnosis)
+%Data as a symptom
+%* GP said he would respect patient's efforts
+%* will patients be dissatisfied when doctors dismiss data
+
+
+
+\subsection{Indicate the Data Quality and Provenance}
 
 % quality, sampling problems, making it up, provenance (usb pill box vs diarising) - instruments will get more accurate, but data needs to be annotated with how accurate, when, how it was measured
 % more information is not necessarily better - has to capture important things
@@ -712,13 +733,17 @@ Data as a symptom
 
 %\subsection{Representation: presentation in form of a medical record} % (representational flexibility)
 
-* Interpreting according to personal belief
-* Data more trustworthy when it appears normal
-* structured in a way clinicians are used to
-  * Training / habit / changes happen slowely / won't change
-  * adopts standard that have been designed in safety critical scenarios
-    * standardisation of units
-    * standardisation of design practices
+Clinicians were unwilling to make use of self-logged data without know how it had been recorded. A number of factors were mentioned around this, including what device had been used, if the device was clinical grade, the quality, sampling and reliability of the recorded data, how the data had been analysed and presented, and the methods which the patient had used. For the heart rate data, clinicians wanted to retake the readings using their own calibrated devices.
+
+Device manufacturers and software engineers can often get an idea of reliability by running studies. If they do such studies, annotate data with their estimated reliability... regulation..
+
+Make clear the provenance of the data: where has it come from? how has it been analysed and presented? Adopt a standard model for provenance.
+
+
+Ambiguity - units
+
+
+
 * timeline / linking with other information
   * placed in context of patient history - what else was happening on those dates?
   * comparing data to previous days
@@ -726,38 +751,23 @@ Data as a symptom
   * highlight inconsistencies / contradictions
 * however, clinicians didn't always trust the data
   * clinicians needed validation, want to retake readings
-  * devices need to be regulated
-  * need for provinance?
+ 
+% when readings are taking, evenly spaced - represent this graphically without need to stare at it for a long time
+% 
 
 
-\subsection{QS is a supplement - patient needs to be there}
+\subsection{Accommodate for Cognitive Bias}
 
-% What did we observe?
-
-% How do they relate to the literature. did it correspond to a particular theme? support or contrast?
-
-% COMPLETENESS - It has been observed that individual's who self log often do so sporadically, leaving out information which may be important. Individuals attributed this to cumbersome tools and the fact that it takes time and effort to track. It has been observed that clinicians look for detailed information to identify patterns and anomalies in data.
-
-% How can we make QS apps better?
-
-
-need for physical exam, how they walk in, talking to patient
-implications for doctors on social nets
-stereotyping?
-* doctors ask about what the patient was doing at the time of recording
-Immediate dismissal of data
-Psych issues.
-
-
-
-
-\subsection{Cognitive Bias}
-
-% Confirmation bias - interpret symptoms according to background
-% Salient features; pattern recognition; illusory patterns
-% Priming
-% Prior experience
-% not possible to measure specific presense, but some of the results are preliminary evidence
+not possible to measure specific presence, but some of the results are preliminary evidence:
+\begin{itemize}
+\item  Confirmation bias - interpret symptoms according to background (e.g. pulmonology - looking for history of asthma)
+\item  Illusory patterns - pattern recognition in noise
+\item  Priming - presentation of caffeine data led some clinicians to immediately think it was a caffeine issue
+\item  Prior experience - referring back to previous patients
+\item  Stereotyping - students drink; engineers self-track
+\item  Interpreting according to personal belief - I thought heart rate was more variable than that
+\item  Data more trustworthy when it appears normal
+\end{itemize}
 
 % implications for data representation - raw data, not salient faatures / summary; poor data format (not sused to that format) - explore further
 
